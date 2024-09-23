@@ -1,0 +1,13 @@
+db_1.jpg:
+Objects in Image A without a match in Image B:
+1. Wooden structure with a brown covering
+2. Potted plant on the right side
+3. Snow on the ground
+4. Christmas lights
+
+Objects in Image B without a match in Image A:
+1. Orange and white traffic barrels
+2. Metal barricades
+3. Yellow caution tape
+4. Green plants in front of the windows
+

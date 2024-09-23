@@ -76,25 +76,27 @@ def generate_reranking(image_pairs, res_file_name, temperature=0.2):
 #     #     break
 # print(len(image_pairs))
 
-source_txt_file = 'D:\\cv\\alvpr\\LLM4VPR\\db_q_test.txt'  # Ensure this path is correct
-base_image_folder = 'D:\\cv\\alvpr\\test_images\\test_images'
+# source_txt_file = 'D:\\cv\\alvpr\\LLM4VPR\\db_q_test.txt'  # Ensure this path is correct
+# base_image_folder = 'D:\\cv\\alvpr\\test_images\\test_images'
 
-# Initialize a list to store the image pairs
-image_pairs = []
+# # Initialize a list to store the image pairs
+# image_pairs = []
 
-# Open the source text file and read the lines
-with open(source_txt_file, 'r') as file:
-    for line in file:
-        # Split the line into three strings
-        parts = line.strip().split()
-        if len(parts) >= 2:
-            # Get the image paths (first and second strings)
-            db_image_path = os.path.join(base_image_folder, os.path.basename(parts[0]))
-            query_image_path = os.path.join(base_image_folder, os.path.basename(parts[1]))
+# # Open the source text file and read the lines
+# with open(source_txt_file, 'r') as file:
+#     for line in file:
+#         # Split the line into three strings
+#         parts = line.strip().split()
+#         if len(parts) >= 2:
+#             # Get the image paths (first and second strings)
+#             db_image_path = os.path.join(base_image_folder, os.path.basename(parts[0]))
+#             query_image_path = os.path.join(base_image_folder, os.path.basename(parts[1]))
             
-            # Append the tuple of real image paths to the list
-            image_pairs.append((db_image_path, query_image_path))
+#             # Append the tuple of real image paths to the list
+#             image_pairs.append((db_image_path, query_image_path))
 
-# Display the first 10 image pairs as a sample
+# # Display the first 10 image pairs as a sample
 
-generate_reranking(image_pairs,"text_100.txt")
+# image_pairs is a list of tuples with each tuple storing the path of image pairs
+image_pairs=[("db_1.jpg","q_1.jpg")]
+generate_reranking(image_pairs,"text.txt")
