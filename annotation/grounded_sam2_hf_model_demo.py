@@ -9,7 +9,7 @@ from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection 
 from tqdm import tqdm
-
+import pickle
 # environment settings
 # use bfloat16
 torch.autocast(device_type="cuda", dtype=torch.bfloat16).__enter__()
@@ -31,7 +31,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 processor = AutoProcessor.from_pretrained(model_id)
 grounding_model = AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to(device)
 
-source_txt_file = 'text.txt'  # Replace with your actual text file path
+source_txt_file = 'text_100.txt'  # Replace with your actual text file path
 
 # Initialize a list to store all the lists
 all_lists = []
@@ -71,15 +71,41 @@ with open("/scratch/ds5725/alvpr/deep-visual-geo-localization-benchmark/matched_
             image_paths.append(parts[1])
         if len(image_paths)>=len(all_lists):
             break
-print(len(image_paths))
+
+import os
+
+# Define the base directory
+base_dir = "test_res"
+
+# List of directories to create
+dirs_to_create = [
+    "annot_imgs",
+    "concat_imgs",
+    "detections",
+    "labels",
+    "mask_imgs"
+]
+
+# Create each directory if it does not exist
+for dir_name in dirs_to_create:
+    dir_path = os.path.join(base_dir, dir_name)
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+        
+f_test=open("test_pairs.txt","w")
 for i in tqdm(range(len(image_paths))):        
     # if i!=5:
     #     continue
     # img_path = '/scratch/ds5725/LineFinder/YOLOv8-HumanDetection/queue.jpg'
     img_path=image_paths[i]
-    image = Image.open(img_path)
+    image = Image.open(img_path).convert("RGB")
+    if i%2==0:
+        img_path1=image_paths[i+1]
+    else:
+        img_path1=image_paths[i-1] 
+    image1 = Image.open(img_path1).convert("RGB")
 
-    sam2_predictor.set_image(np.array(image.convert("RGB")))
+    sam2_predictor.set_image(np.array(image))
 
     # setup the input image and text prompt for SAM 2 and Grounding DINO
     # VERY important: text queries need to be lowercased + end with a dot
@@ -162,7 +188,14 @@ for i in tqdm(range(len(image_paths))):
         mask=masks.astype(bool),  # (n, h, w)
         class_id=class_ids
     )
+    f_test.write(str(img_path)+' '+str(img_path1)+'\n')
+    # print(img_path, detections.xyxy.shape, detections.mask.shape, labels)
 
+    with open('test_res/detections/'+str(i)+'.pkl', 'wb') as file:
+         pickle.dump(detections, file)
+    f_l=open("test_res/labels/"+str(i)+".txt","w")
+    for label in labels:
+        f_l.write(label+"\n")
 
     """
     Note that if you want to use default color map,
@@ -173,12 +206,27 @@ for i in tqdm(range(len(image_paths))):
 
     label_annotator = sv.LabelAnnotator(color=ColorPalette.from_hex(CUSTOM_COLOR_MAP))
     annotated_frame = label_annotator.annotate(scene=annotated_frame, detections=detections, labels=labels)
-    # cv2.imwrite("056_1_02_0_box.jpg", annotated_frame)
 
     mask_annotator = sv.MaskAnnotator(color=ColorPalette.from_hex(CUSTOM_COLOR_MAP))
     annotated_frame = mask_annotator.annotate(scene=annotated_frame, detections=detections)
-    cv2.imwrite("test_res/"+str(i)+"_blm.jpg", annotated_frame)
+    # cv2.imwrite("test_res/"+str(i)+"_blm1.jpg", annotated_frame)
+
+    print(i, img_path,img_path1)
+    annotated_frame = Image.fromarray(annotated_frame[..., ::-1]).convert('RGB').resize((640, 480))
+    annotated_frame.save('test_res/annot_imgs/'+str(i)+'.png')
+
+    # Create a new image to hold the concatenation
+    concatenated_img = Image.new('RGB', (640 * 3, 480))
+
+    # Paste each image in the new concatenated image
+    concatenated_img.paste(annotated_frame, (0, 0))
+    concatenated_img.paste(image, (640, 0))
+    concatenated_img.paste(image1, (640 * 2, 0))
+
+    # Save or show the concatenated image
+    concatenated_img.save('test_res/concat_imgs/'+str(i)+'.png')
 
     mask_annotator = sv.MaskAnnotator(color=ColorPalette.from_hex(CUSTOM_COLOR_MAP))
     annotated_frame = mask_annotator.annotate(scene=img.copy(), detections=detections)
-    cv2.imwrite("test_res/"+str(i)+"_mask.jpg", annotated_frame)
+    cv2.imwrite("test_res/mask_imgs/"+str(i)+".jpg", annotated_frame)
+    
