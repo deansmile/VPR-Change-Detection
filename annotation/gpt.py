@@ -5,7 +5,7 @@ from time import sleep
 from tqdm import tqdm
 
 # Set your OpenAI API key
-openai.api_key = ""
+openai.api_key = "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"
 
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
