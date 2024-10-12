@@ -5,7 +5,7 @@ from time import sleep
 from tqdm import tqdm
 
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
@@ -63,40 +63,17 @@ def generate_reranking(image_pairs, res_file_name, temperature=0.2):
         sleep(1)
     # return result_file
 
-# t0_path="D:\\cv\\alvpr\\LLM4VPR\\test\\test\\t0"
-# t1_path="D:\\cv\\alvpr\\LLM4VPR\\test\\test\\t1"
-# f_fps=open("vl_cmu_cd_file_paths.txt")
-# image_pairs=[]
-# # i=0
-# for line in f_fps.readlines():
-#     s=line.strip()
-#     image_pairs.append((t0_path+"\\"+s,t1_path+"\\"+s))
-#     # i+=1
-#     # if i>=5:
-#     #     break
-# print(len(image_pairs))
-
-# source_txt_file = 'D:\\cv\\alvpr\\LLM4VPR\\db_q_test.txt'  # Ensure this path is correct
-# base_image_folder = 'D:\\cv\\alvpr\\test_images\\test_images'
-
-# # Initialize a list to store the image pairs
-# image_pairs = []
-
-# # Open the source text file and read the lines
-# with open(source_txt_file, 'r') as file:
-#     for line in file:
-#         # Split the line into three strings
-#         parts = line.strip().split()
-#         if len(parts) >= 2:
-#             # Get the image paths (first and second strings)
-#             db_image_path = os.path.join(base_image_folder, os.path.basename(parts[0]))
-#             query_image_path = os.path.join(base_image_folder, os.path.basename(parts[1]))
-            
-#             # Append the tuple of real image paths to the list
-#             image_pairs.append((db_image_path, query_image_path))
-
-# # Display the first 10 image pairs as a sample
-
-# image_pairs is a list of tuples with each tuple storing the path of image pairs
-image_pairs=[("db_1.jpg","q_1.jpg")]
-generate_reranking(image_pairs,"text.txt")
+f=open("/scratch/ds5725/alvpr/deep-visual-geo-localization-benchmark/matched_paths/db_q1_q_q3.txt")
+image_pairs=[]
+lines=f.readlines()
+# i=0
+for line in lines[100:200]:
+    s=line.strip().split()
+    image_pairs.append((s[0],s[1]))
+    # i+=1
+    # if i>=5:
+    #     break
+print(len(image_pairs))
+# # Example usage
+# image_pairs = [("D:\\cv\\alvpr\\LLM4VPR\\q_1.jpg", "D:\\cv\\alvpr\\LLM4VPR\\db_1.jpg")]
+generate_reranking(image_pairs,"text_100_200.txt")
