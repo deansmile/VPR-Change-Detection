@@ -1,0 +1,3 @@
+# ninja log v5
+2	6689	7501080540066836	D:/VPR-Change-Detection/Grounded-SAM-2/grounding_dino/build/temp.win-amd64-cpython-310/Release/VPR-Change-Detection/Grounded-SAM-2/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.obj	7e40944fbdef6925
+13	14226	7501080615462880	D:/VPR-Change-Detection/Grounded-SAM-2/grounding_dino/build/temp.win-amd64-cpython-310/Release/VPR-Change-Detection/Grounded-SAM-2/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.obj	262bd782a04dea55
