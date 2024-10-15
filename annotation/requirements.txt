@@ -1,0 +1,7 @@
+opencv-python
+numpy
+supervision
+Pillow
+tqdm
+openai
+transformers
