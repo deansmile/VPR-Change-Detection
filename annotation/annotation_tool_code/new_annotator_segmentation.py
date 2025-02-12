@@ -20,7 +20,7 @@ class ImageAnnotationTool:
         self.current_image_index = 0
         self.annotations = {}
         self.image_folder = ""
-        self.segment_folder = ""
+        self.segment_images = ""
         self.label_folder = ""
         self.annotation_file = ""
         
@@ -94,42 +94,50 @@ class ImageAnnotationTool:
         # On close
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
 
-    def load_images(self):
-        folder = filedialog.askdirectory()
-        if not folder:
-            return
-        
-        # The folder you pick is your 'concat' folder
-        self.image_folder = folder
-        
-        # The sibling folder is called 'segment_folder' 
-        self.segment_folder = os.path.join(os.path.dirname(self.image_folder), "segment_folder")
-        if not os.path.exists(self.segment_folder):
-            messagebox.showerror("Error", f"Segment folder not found at: {self.segment_folder}")
-            return
-        
-        # For label files
-        self.label_folder = os.path.join(os.path.dirname(self.image_folder), "labels")
-        if not os.path.exists(self.label_folder):
-            messagebox.showerror("Error", "Label folder not found!")
-            return
-        
-        # For annotation file
-        self.annotation_file = os.path.join(os.path.dirname(self.image_folder), "human_annotation.txt")
-        
-        # Gather list of images in the chosen concat folder
-        all_files = [f for f in os.listdir(self.image_folder) if f.endswith('.png')]
-        # Sort them numeric if possible
-        self.image_list = sorted(
-            all_files,
-            key=lambda x: int(os.path.splitext(x)[0]) if os.path.splitext(x)[0].isdigit() else x
-        )
-        if not self.image_list:
-            messagebox.showerror("Error", "No .png images found in the selected folder!")
-            return
-        
-        self.load_annotation_file()
-        self.update_ui()
+def load_images(self):
+    folder = filedialog.askdirectory()
+    if not folder:
+        return
+    
+    self.image_folder = folder
+    self.segment_imges = os.path.join(os.path.dirname(self.image_folder), "segment_imges")
+
+    if not os.path.exists(self.segment_imges):
+        messagebox.showerror("Error", f"Segment folder not found at: {self.segment_imges}")
+        return
+
+    # Label folder
+    self.label_folder = os.path.join(os.path.dirname(self.image_folder), "labels")
+    if not os.path.exists(self.label_folder):
+        messagebox.showerror("Error", "Label folder not found!")
+        return
+
+    self.annotation_file = os.path.join(os.path.dirname(self.image_folder), "segment_annotation.txt")
+
+    # 1) Gather PNG files from the concat_images folder
+    concat_files = [f for f in os.listdir(self.image_folder) if f.lower().endswith('.png')]
+    
+    # 2) Gather PNG files from the segment_imges
+    segment_files = set(f for f in os.listdir(self.segment_imges) if f.lower().endswith('.png'))
+
+    # 3) Keep only the files that appear in BOTH
+    common_files = [f for f in concat_files if f in segment_files]
+
+    # 4) Sort them (numeric if possible)
+    self.image_list = sorted(
+        common_files,
+        key=lambda x: int(os.path.splitext(x)[0]) if os.path.splitext(x)[0].isdigit() else x
+    )
+
+    if not self.image_list:
+        messagebox.showerror("Error", "No matching images found in both folders!")
+        return
+
+    # Load existing annotations if any
+    self.load_annotation_file()
+    # Update the UI with the first image
+    self.update_ui()
+
 
     def load_annotation_file(self):
         """
@@ -170,7 +178,7 @@ class ImageAnnotationTool:
         top_cv = cv2.cvtColor(top_cv, cv2.COLOR_BGR2RGB)
         
         # 2) Load bottom image from segment folder
-        bottom_path = os.path.join(self.segment_folder, image_name)
+        bottom_path = os.path.join(self.segment_images, image_name)
         bottom_cv = cv2.imread(bottom_path)
         if bottom_cv is None:
             # Possibly no error, or show a warning. We'll just place a blank if missing.

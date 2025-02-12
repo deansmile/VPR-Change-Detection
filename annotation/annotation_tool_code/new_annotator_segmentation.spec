@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['new_annotator.py'],
+    ['new_annotator_segmentation.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='new_annotator',
+    name='new_annotator_segmentation',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
