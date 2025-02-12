@@ -20,7 +20,7 @@ class ImageAnnotationTool:
         self.current_image_index = 0
         self.annotations = {}
         self.image_folder = ""
-        self.segment_images = ""
+        self.segment_images = ""   # <-- corrected the attribute name
         self.label_folder = ""
         self.annotation_file = ""
         
@@ -94,55 +94,52 @@ class ImageAnnotationTool:
         # On close
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
 
-def load_images(self):
-    folder = filedialog.askdirectory()
-    if not folder:
-        return
-    
-    self.image_folder = folder
-    self.segment_imges = os.path.join(os.path.dirname(self.image_folder), "segment_imges")
+    def load_images(self):
+        folder = filedialog.askdirectory()
+        if not folder:
+            return
+        
+        self.image_folder = folder
+        self.segment_images = os.path.join(os.path.dirname(self.image_folder), "segment_images")
 
-    if not os.path.exists(self.segment_imges):
-        messagebox.showerror("Error", f"Segment folder not found at: {self.segment_imges}")
-        return
+        if not os.path.exists(self.segment_images):
+            messagebox.showerror("Error", f"Segment folder not found at: {self.segment_images}")
+            return
 
-    # Label folder
-    self.label_folder = os.path.join(os.path.dirname(self.image_folder), "labels")
-    if not os.path.exists(self.label_folder):
-        messagebox.showerror("Error", "Label folder not found!")
-        return
+        # Label folder
+        self.label_folder = os.path.join(os.path.dirname(self.image_folder), "labels")
+        if not os.path.exists(self.label_folder):
+            messagebox.showerror("Error", "Label folder not found!")
+            return
 
-    self.annotation_file = os.path.join(os.path.dirname(self.image_folder), "segment_annotation.txt")
+        self.annotation_file = os.path.join(os.path.dirname(self.image_folder), "segment_annotation.txt")
 
-    # 1) Gather PNG files from the concat_images folder
-    concat_files = [f for f in os.listdir(self.image_folder) if f.lower().endswith('.png')]
-    
-    # 2) Gather PNG files from the segment_imges
-    segment_files = set(f for f in os.listdir(self.segment_imges) if f.lower().endswith('.png'))
+        # 1) Gather PNG files from the concat_images folder
+        concat_files = [f for f in os.listdir(self.image_folder) if f.lower().endswith('.png')]
+        
+        # 2) Gather PNG files from the segment_images
+        segment_files = set(f for f in os.listdir(self.segment_images) if f.lower().endswith('.png'))
 
-    # 3) Keep only the files that appear in BOTH
-    common_files = [f for f in concat_files if f in segment_files]
+        # 3) Keep only the files that appear in BOTH
+        common_files = [f for f in concat_files if f in segment_files]
 
-    # 4) Sort them (numeric if possible)
-    self.image_list = sorted(
-        common_files,
-        key=lambda x: int(os.path.splitext(x)[0]) if os.path.splitext(x)[0].isdigit() else x
-    )
+        # 4) Sort them (numeric if possible)
+        self.image_list = sorted(
+            common_files,
+            key=lambda x: int(os.path.splitext(x)[0]) if os.path.splitext(x)[0].isdigit() else x
+        )
 
-    if not self.image_list:
-        messagebox.showerror("Error", "No matching images found in both folders!")
-        return
+        if not self.image_list:
+            messagebox.showerror("Error", "No matching images found in both folders!")
+            return
 
-    # Load existing annotations if any
-    self.load_annotation_file()
-    # Update the UI with the first image
-    self.update_ui()
-
+        # Load existing annotations if any
+        self.load_annotation_file()
+        # Update the UI with the first image
+        self.update_ui()
 
     def load_annotation_file(self):
-        """
-        Load existing annotation file or initialize an empty dictionary.
-        """
+        """Load existing annotation file or initialize an empty dictionary."""
         if os.path.exists(self.annotation_file):
             with open(self.annotation_file, 'r') as f:
                 lines = f.readlines()
@@ -166,10 +163,9 @@ def load_images(self):
         if not self.image_list:
             return
 
-        # Figure out which image is selected
         image_name = self.image_list[self.current_image_index]
         
-        # 1) Load top image from concat folder
+        # Load the top image from self.image_folder
         top_path = os.path.join(self.image_folder, image_name)
         top_cv = cv2.imread(top_path)
         if top_cv is None:
@@ -177,16 +173,16 @@ def load_images(self):
             return
         top_cv = cv2.cvtColor(top_cv, cv2.COLOR_BGR2RGB)
         
-        # 2) Load bottom image from segment folder
+        # Load the bottom image from self.segment_images
         bottom_path = os.path.join(self.segment_images, image_name)
         bottom_cv = cv2.imread(bottom_path)
         if bottom_cv is None:
             # Possibly no error, or show a warning. We'll just place a blank if missing.
-            bottom_cv = 255 * (1 - top_cv)  # dummy or something
+            bottom_cv = 255 * (1 - top_cv)  # dummy placeholder
         else:
             bottom_cv = cv2.cvtColor(bottom_cv, cv2.COLOR_BGR2RGB)
 
-        # Optional: scale them if they don't fit.  (For example, scale to a max width.)
+        # If you want to skip scaling for original size, comment these out:
         def scale_for_display_if_needed(cv_img, max_width=1280):
             h, w = cv_img.shape[:2]
             if w > max_width:
@@ -196,21 +192,20 @@ def load_images(self):
                 cv_img = cv2.resize(cv_img, (new_w, new_h), interpolation=cv2.INTER_LANCZOS4)
             return cv_img
         
-        top_cv = scale_for_display_if_needed(top_cv, max_width=1440)     # or whatever max you want
+        top_cv = scale_for_display_if_needed(top_cv, max_width=1440)
         bottom_cv = scale_for_display_if_needed(bottom_cv, max_width=960)
 
         # Convert to ImageTk
         self.top_image = ImageTk.PhotoImage(Image.fromarray(top_cv))
         self.bottom_image = ImageTk.PhotoImage(Image.fromarray(bottom_cv))
 
-        # Update labels
         self.image_label_top.config(image=self.top_image)
         self.image_label_top.image = self.top_image  # keep a reference
 
         self.image_label_bottom.config(image=self.bottom_image)
         self.image_label_bottom.image = self.bottom_image  # keep a reference
 
-        # Load label file content for the current image if present
+        # Load label file content
         label_path = os.path.join(self.label_folder, image_name.replace('.png', '.txt'))
         if os.path.exists(label_path):
             with open(label_path, 'r') as f:
@@ -262,7 +257,6 @@ def load_images(self):
     def on_closing(self):
         self.save_current_annotation()
         self.root.destroy()
-
 
 if __name__ == "__main__":
     root = tk.Tk()
