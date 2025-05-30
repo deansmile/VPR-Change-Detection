@@ -1,0 +1,553 @@
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+start programstart programstart program
+
+start program
+
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: Tracking run with wandb version 0.19.8
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Tracking run with wandb version 0.19.8
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.07-04-44",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+get combined dataset
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.07-04-44",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.07-04-44",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.07-04-44",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+
+
+get combined datasetget combined datasetget combined dataset
+
+
+initialize cmu dataset
+initialize cmu datasetinitialize cmu datasetinitialize cmu dataset
+
+
+initialize our train datasetinitialize our train dataset
+
+initialize our train datasetinitialize our train dataset
+
+Using DistributedSampler for train
+Using DistributedSampler for train
+Using DistributedSampler for train
+Using DistributedSampler for train
+initialize cmu dataset
+initialize cmu dataset
+initialize cmu dataset
+initialize cmu dataset
+initialize our train dataset
+initialize our train dataset
+initialize our train dataset
+initialize our train dataset
+Using DistributedSampler for val
+Using DistributedSampler for val
+Using DistributedSampler for val
+Using DistributedSampler for val
+initialize cmu dataset
+initialize our test dataset
+initialize cmu dataset
+initialize our test dataset
+initialize cmu dataset
+initialize our test dataset
+initialize cmu dataset
+initialize our test dataset
+Using DistributedSampler for test
+Using DistributedSampler for test
+Using DistributedSampler for test
+Using DistributedSampler for test
+epochs: 200
+No checkpoint found, starting from scratch.
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+epochs: 200
+No checkpoint found, starting from scratch.
+epochs: 200
+No checkpoint found, starting from scratch.
+epochs: 200
+No checkpoint found, starting from scratch.
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+LORA added to the encoderLORA added to the encoder
+
+LORA added to the encoderLORA added to the encoder
+
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+Unfreeze fusion_layers
+Unfreeze fusion_layers
+Unfreeze fusion_layers
+     ===== running 0 epoch =====    
+     2025-05-12.07-05-01 
+    ===== running 0 epoch ===== 
+    
+     2025-05-12.07-05-01 *** train one epoch ***
+
+         
+      *** train one epoch ***
+===== running 0 epoch =====
+         2025-05-12.07-05-01
+      
+===== running 0 epoch =====    
+     *** train one epoch *** 
+2025-05-12.07-05-01
+     
+     *** train one epoch ***
+after set grad
+after set grad
+after prog
+start loopafter prog
+
+after set gradstart loop
+
+after prog
+start loop
+after set grad
+after prog
+start loop
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  [' bare tree.', 'smoke or haze in the top left area.']
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  ['none.', 'truck. traffic cones.']
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  ['outdoor seating. tables. ', 'truck with takanashi logo.']
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  ['white car. bicyclist.', 'none observed.']
+          output: output:   torch.Size([2, 504, 504, 2])torch.Size([2, 504, 504, 2])  ->->  torch.Size([2, 2, 504, 504])torch.Size([2, 2, 504, 504])
+
+     output:  torch.Size([2, 504, 504, 2]) -> torch.Size([2, 2, 504, 504])
+     output:  torch.Size([2, 504, 504, 2]) -> torch.Size([2, 2, 504, 504])
+[W reducer.cpp:325] Warning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [2, 384, 1, 1], strides() = [384, 1, 384, 384]
+bucket_view.sizes() = [2, 384, 1, 1], strides() = [384, 1, 1, 1] (function operator())
+[W reducer.cpp:325] Warning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [2, 384, 1, 1], strides() = [384, 1, 384, 384]
+bucket_view.sizes() = [2, 384, 1, 1], strides() = [384, 1, 1, 1] (function operator())
+[W reducer.cpp:325] Warning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [2, 384, 1, 1], strides() = [384, 1, 384, 384]
+bucket_view.sizes() = [2, 384, 1, 1], strides() = [384, 1, 1, 1] (function operator())
+[W reducer.cpp:325] Warning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [2, 384, 1, 1], strides() = [384, 1, 384, 384]
+bucket_view.sizes() = [2, 384, 1, 1], strides() = [384, 1, 1, 1] (function operator())
+     Train Epoch: [0/2467]	Loss: 0.689440
+     Train Epoch: [0/2467]	Loss: 0.692742
+         Train Epoch: [0/2467]	Loss: 0.677381 
+Train Epoch: [0/2467]	Loss: 0.686943
+     Train Epoch: [20/2467]	Loss: 0.700284
+     Train Epoch: [20/2467]	Loss: 0.687390
+     Train Epoch: [20/2467]	Loss: 0.667225
+     Train Epoch: [20/2467]	Loss: 0.695462
+         Train Epoch: [40/2467]	Loss: 0.686903
+     Train Epoch: [40/2467]	Loss: 0.703111
+ Train Epoch: [40/2467]	Loss: 0.689582
+     Train Epoch: [40/2467]	Loss: 0.694484
+         Train Epoch: [60/2467]	Loss: 0.687210 
+Train Epoch: [60/2467]	Loss: 0.689785
+     Train Epoch: [60/2467]	Loss: 0.690439
+     Train Epoch: [60/2467]	Loss: 0.693327
+     Train Epoch: [80/2467]	Loss: 0.705202
+     Train Epoch: [80/2467]	Loss: 0.693560
+          Train Epoch: [80/2467]	Loss: 0.690892Train Epoch: [80/2467]	Loss: 0.690387
+
+             Train Epoch: [100/2467]	Loss: 0.689170  
+Train Epoch: [100/2467]	Loss: 0.694355Train Epoch: [100/2467]	Loss: 0.693521
+
+     Train Epoch: [100/2467]	Loss: 0.695351
+         Train Epoch: [120/2467]	Loss: 0.679449
+     Train Epoch: [120/2467]	Loss: 0.683577
+ Train Epoch: [120/2467]	Loss: 0.693273
+     Train Epoch: [120/2467]	Loss: 0.692819
+     Train Epoch: [140/2467]	Loss: 0.692838
+     Train Epoch: [140/2467]	Loss: 0.676444
+     Train Epoch: [140/2467]	Loss: 0.681860
+     Train Epoch: [140/2467]	Loss: 0.688261
+         Train Epoch: [160/2467]	Loss: 0.691237
+ Train Epoch: [160/2467]	Loss: 0.677931
+     Train Epoch: [160/2467]	Loss: 0.694431
+     Train Epoch: [160/2467]	Loss: 0.667382
+         Train Epoch: [180/2467]	Loss: 0.681548
+ Train Epoch: [180/2467]	Loss: 0.687501
+     Train Epoch: [180/2467]	Loss: 0.708909
+     Train Epoch: [180/2467]	Loss: 0.692278
+          Train Epoch: [200/2467]	Loss: 0.694274Train Epoch: [200/2467]	Loss: 0.687137
+
+     Train Epoch: [200/2467]	Loss: 0.691218
+     Train Epoch: [200/2467]	Loss: 0.693537
+     Train Epoch: [220/2467]	Loss: 0.683855    
+ Train Epoch: [220/2467]	Loss: 0.690299
+     Train Epoch: [220/2467]	Loss: 0.694048
+     Train Epoch: [220/2467]	Loss: 0.692885
+         Train Epoch: [240/2467]	Loss: 0.697477
+ Train Epoch: [240/2467]	Loss: 0.692108
+     Train Epoch: [240/2467]	Loss: 0.690521
+     Train Epoch: [240/2467]	Loss: 0.681189
+          Train Epoch: [260/2467]	Loss: 0.685720Train Epoch: [260/2467]	Loss: 0.680692
+
+     Train Epoch: [260/2467]	Loss: 0.680167
+     Train Epoch: [260/2467]	Loss: 0.671489
+     Train Epoch: [280/2467]	Loss: 0.695962
+     Train Epoch: [280/2467]	Loss: 0.695666
+     Train Epoch: [280/2467]	Loss: 0.691039
+     Train Epoch: [280/2467]	Loss: 0.680923
+     Train Epoch: [300/2467]	Loss: 0.685889
+     Train Epoch: [300/2467]	Loss: 0.674504
+     Train Epoch: [300/2467]	Loss: 0.692842
+     Train Epoch: [300/2467]	Loss: 0.693580
+     Train Epoch: [320/2467]	Loss: 0.697665
+     Train Epoch: [320/2467]	Loss: 0.693211
+     Train Epoch: [320/2467]	Loss: 0.693006
+     Train Epoch: [320/2467]	Loss: 0.692266
+     Train Epoch: [340/2467]	Loss: 0.699780
+         Train Epoch: [340/2467]	Loss: 0.689309 
+Train Epoch: [340/2467]	Loss: 0.689146
+     Train Epoch: [340/2467]	Loss: 0.693732
+     Train Epoch: [360/2467]	Loss: 0.688107
+          Train Epoch: [360/2467]	Loss: 0.690032Train Epoch: [360/2467]	Loss: 0.698021
+
+     Train Epoch: [360/2467]	Loss: 0.683943
+     Train Epoch: [380/2467]	Loss: 0.688565
+          Train Epoch: [380/2467]	Loss: 0.662757
+Train Epoch: [380/2467]	Loss: 0.669083
+     Train Epoch: [380/2467]	Loss: 0.697534
+     Train Epoch: [400/2467]	Loss: 0.691587
+         Train Epoch: [400/2467]	Loss: 0.693332
+ Train Epoch: [400/2467]	Loss: 0.695067
+     Train Epoch: [400/2467]	Loss: 0.655564
+         Train Epoch: [420/2467]	Loss: 0.691767
+ Train Epoch: [420/2467]	Loss: 0.696455
+     Train Epoch: [420/2467]	Loss: 0.694338
+     Train Epoch: [420/2467]	Loss: 0.695108
+          Train Epoch: [440/2467]	Loss: 0.690747Train Epoch: [440/2467]	Loss: 0.669430
+
+     Train Epoch: [440/2467]	Loss: 0.693167
+     Train Epoch: [440/2467]	Loss: 0.692781
+          Train Epoch: [460/2467]	Loss: 0.695624Train Epoch: [460/2467]	Loss: 0.685993
+
+     Train Epoch: [460/2467]	Loss: 0.684675
+     Train Epoch: [460/2467]	Loss: 0.663817
+         Train Epoch: [480/2467]	Loss: 0.691130
+ Train Epoch: [480/2467]	Loss: 0.688564
+     Train Epoch: [480/2467]	Loss: 0.693115    
+ Train Epoch: [480/2467]	Loss: 0.688779
+     Train Epoch: [500/2467]	Loss: 0.692783
+          Train Epoch: [500/2467]	Loss: 0.682938
+Train Epoch: [500/2467]	Loss: 0.702203
+     Train Epoch: [500/2467]	Loss: 0.677965
+         Train Epoch: [520/2467]	Loss: 0.690921    
+ Train Epoch: [520/2467]	Loss: 0.695350
+ Train Epoch: [520/2467]	Loss: 0.688526
+     Train Epoch: [520/2467]	Loss: 0.689711
+             Train Epoch: [540/2467]	Loss: 0.694239
+ Train Epoch: [540/2467]	Loss: 0.669743
+ Train Epoch: [540/2467]	Loss: 0.671078
+     Train Epoch: [540/2467]	Loss: 0.688789
+          Train Epoch: [560/2467]	Loss: 0.689005Train Epoch: [560/2467]	Loss: 0.682124
+
+     Train Epoch: [560/2467]	Loss: 0.691032
+     Train Epoch: [560/2467]	Loss: 0.699440
+     Train Epoch: [580/2467]	Loss: 0.692319
+     Train Epoch: [580/2467]	Loss: 0.695896
+     Train Epoch: [580/2467]	Loss: 0.683622
+     Train Epoch: [580/2467]	Loss: 0.692648
+     Train Epoch: [600/2467]	Loss: 0.683308
+         Train Epoch: [600/2467]	Loss: 0.679113
+ Train Epoch: [600/2467]	Loss: 0.686445
+     Train Epoch: [600/2467]	Loss: 0.676260
+          Train Epoch: [620/2467]	Loss: 0.718318Train Epoch: [620/2467]	Loss: 0.653220
+
+     Train Epoch: [620/2467]	Loss: 0.686987
+     Train Epoch: [620/2467]	Loss: 0.684272
+         Train Epoch: [640/2467]	Loss: 0.695046
+ Train Epoch: [640/2467]	Loss: 0.689262    
+     Train Epoch: [640/2467]	Loss: 0.662523
+ Train Epoch: [640/2467]	Loss: 0.687530
+     Train Epoch: [660/2467]	Loss: 0.694915
+     Train Epoch: [660/2467]	Loss: 0.691830
+     Train Epoch: [660/2467]	Loss: 0.693173
+     Train Epoch: [660/2467]	Loss: 0.691409
+         Train Epoch: [680/2467]	Loss: 0.691720
+     Train Epoch: [680/2467]	Loss: 0.686278
+ Train Epoch: [680/2467]	Loss: 0.710893
+     Train Epoch: [680/2467]	Loss: 0.688486
+         Train Epoch: [700/2467]	Loss: 0.685952
+ Train Epoch: [700/2467]	Loss: 0.686240
+     Train Epoch: [700/2467]	Loss: 0.690519
+     Train Epoch: [700/2467]	Loss: 0.680297
+              Train Epoch: [720/2467]	Loss: 0.677939Train Epoch: [720/2467]	Loss: 0.687786
+
+ Train Epoch: [720/2467]	Loss: 0.685259
+     Train Epoch: [720/2467]	Loss: 0.703688
+             Train Epoch: [740/2467]	Loss: 0.686987    
+ Train Epoch: [740/2467]	Loss: 0.686005
+  Train Epoch: [740/2467]	Loss: 0.690752Train Epoch: [740/2467]	Loss: 0.676570
+
+         Train Epoch: [760/2467]	Loss: 0.693250
+     Train Epoch: [760/2467]	Loss: 0.693224
+ Train Epoch: [760/2467]	Loss: 0.693087
+     Train Epoch: [760/2467]	Loss: 0.692376
+         Train Epoch: [780/2467]	Loss: 0.698204    
+  Train Epoch: [780/2467]	Loss: 0.692105Train Epoch: [780/2467]	Loss: 0.693316
+
+     Train Epoch: [780/2467]	Loss: 0.693838
+              Train Epoch: [800/2467]	Loss: 0.694933Train Epoch: [800/2467]	Loss: 0.687162 
+
+Train Epoch: [800/2467]	Loss: 0.675052
+     Train Epoch: [800/2467]	Loss: 0.694614
+         Train Epoch: [820/2467]	Loss: 0.691816 
+Train Epoch: [820/2467]	Loss: 0.674042
+     Train Epoch: [820/2467]	Loss: 0.690753
+     Train Epoch: [820/2467]	Loss: 0.687196
+         Train Epoch: [840/2467]	Loss: 0.678879
+     Train Epoch: [840/2467]	Loss: 0.689482
+ Train Epoch: [840/2467]	Loss: 0.693147
+     Train Epoch: [840/2467]	Loss: 0.671822
+     Train Epoch: [860/2467]	Loss: 0.693319
+     Train Epoch: [860/2467]	Loss: 0.697474
+     Train Epoch: [860/2467]	Loss: 0.683410
+     Train Epoch: [860/2467]	Loss: 0.694847
+         Train Epoch: [880/2467]	Loss: 0.680783
+ Train Epoch: [880/2467]	Loss: 0.679246
+     Train Epoch: [880/2467]	Loss: 0.658619
+     Train Epoch: [880/2467]	Loss: 0.691725
+     Train Epoch: [900/2467]	Loss: 0.694729
+     Train Epoch: [900/2467]	Loss: 0.694330
+     Train Epoch: [900/2467]	Loss: 0.685631
+     Train Epoch: [900/2467]	Loss: 0.695696
+         Train Epoch: [920/2467]	Loss: 0.695597    
+ Train Epoch: [920/2467]	Loss: 0.680366
+ Train Epoch: [920/2467]	Loss: 0.684640
+     Train Epoch: [920/2467]	Loss: 0.694928
+                  Train Epoch: [940/2467]	Loss: 0.691053Train Epoch: [940/2467]	Loss: 0.679372
+
+  Train Epoch: [940/2467]	Loss: 0.689824
+Train Epoch: [940/2467]	Loss: 0.696553
+              Train Epoch: [960/2467]	Loss: 0.678868Train Epoch: [960/2467]	Loss: 0.693123
+
+ Train Epoch: [960/2467]	Loss: 0.690599
+     Train Epoch: [960/2467]	Loss: 0.685699
+                   Train Epoch: [980/2467]	Loss: 0.691462Train Epoch: [980/2467]	Loss: 0.695589 
+Train Epoch: [980/2467]	Loss: 0.701515
+Train Epoch: [980/2467]	Loss: 0.684564
+
+             Train Epoch: [1000/2467]	Loss: 0.693337
+ Train Epoch: [1000/2467]	Loss: 0.697240
+ Train Epoch: [1000/2467]	Loss: 0.693312
+     Train Epoch: [1000/2467]	Loss: 0.689626
+slurmstepd: error: *** JOB 60414517 ON gr048 CANCELLED AT 2025-05-12T03:13:25 ***

@@ -1,0 +1,19 @@
+[submodule "src/py_utils"]
+	path = src/py_utils
+	url = https://github.com/ChadLin9596/python_utils
+[submodule "src/baselines/TransCD"]
+	path = src/baselines/TransCD
+	url = https://github.com/wangle53/TransCD
+	ignore = dirty
+[submodule "src/baselines/DR-TANet"]
+	path = src/baselines/DR-TANet
+	url = https://github.com/Herrccc/DR-TANet
+	ignore = dirty
+[submodule "src/baselines/sscdnet"]
+	path = src/baselines/sscdnet
+	url = https://github.com/kensakurada/sscdnet
+	ignore = dirty
+[submodule "src/baselines/C-3PO"]
+	path = src/baselines/C-3PO
+	url = https://github.com/DoctorKey/C-3PO
+	ignore = dirty

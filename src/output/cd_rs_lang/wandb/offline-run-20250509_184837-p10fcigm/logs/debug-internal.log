@@ -1,0 +1,7 @@
+{"time":"2025-05-09T18:48:37.884153002-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-48-37/wandb/offline-run-20250509_184837-p10fcigm/logs/debug-core.log"}
+{"time":"2025-05-09T18:48:38.104758898-04:00","level":"INFO","msg":"created new stream","id":"p10fcigm"}
+{"time":"2025-05-09T18:48:38.104796856-04:00","level":"INFO","msg":"stream: started","id":"p10fcigm"}
+{"time":"2025-05-09T18:48:38.10480426-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"p10fcigm"}
+{"time":"2025-05-09T18:48:38.104825233-04:00","level":"INFO","msg":"handler: started","stream_id":"p10fcigm"}
+{"time":"2025-05-09T18:48:38.104833081-04:00","level":"INFO","msg":"sender: started","stream_id":"p10fcigm"}
+{"time":"2025-05-09T18:48:38.108972888-04:00","level":"INFO","msg":"Starting system monitor"}

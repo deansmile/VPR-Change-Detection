@@ -1,0 +1,7 @@
+start program
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 464, in <module>
+    args = parse_args()
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 455, in parse_args
+    with open(config, "r") as fd:
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/configs/train_combine.yml'

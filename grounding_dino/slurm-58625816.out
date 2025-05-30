@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Grounded-SAM-2/grounding_dino/test.py", line 1, in <module>
+    from groundingdino.util.inference import load_model, load_image, predict, annotate
+  File "/scratch/ds5725/alvpr/Grounded-SAM-2/grounding_dino/groundingdino/util/inference.py", line 11, in <module>
+    import grounding_dino.groundingdino.datasets.transforms as T
+ModuleNotFoundError: No module named 'grounding_dino'

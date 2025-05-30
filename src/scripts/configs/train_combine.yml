@@ -1,0 +1,96 @@
+##########################################
+# CONFIGURATION FILE OF TRAINING PROCESS #
+##########################################
+
+###################
+# model selection #
+###################
+
+# ---------------
+# DINO section
+model:
+    # choose one of the following
+    name: "dino2 + cross_attention"
+    # name: "dino2 + single_cross_attention1"
+    # name: "dino2 + merge_temporal"
+    # name: "dino2 + co_attention"
+    # name: "dino2 + temporal_attention"
+
+    dino-model: "dinov2_vits14"  # dinov2_vit{s/b/l/g}14
+    layer1: 11                   # s: 11, b: 11, l: 23, g: 39
+    facet1: 'query'              # query, key, value, token
+    facet2: 'query'              # query, key, value, token
+    num-heads: 1
+    dropout-rate: 0.1
+    target-shp-row: 504          # 504 for VL-CMU-CD
+    target-shp-col: 504          # 224 for PSCD
+    num-blocks: 1
+    freeze-dino: True
+    unfreeze-dino-last-n-layer: 0
+
+# Resnet section
+# model:
+#     name: "resnet18 + cross_attention"
+#     num-heads: 1
+#     dropout-rate: 0.1
+#     target-shp-row: 512          # 512 for VL-CMU-CD
+#     target-shp-col: 512          # 224 for PSCD
+#     target-feature: 128          # [64, 128, 256, 512]
+
+
+#############
+# optimizer #
+#############
+
+# ---------
+optimizer:
+    epochs: 100
+    early-stop: 5      # stop if val F1 doesn't improve for 5 consecutive epochs
+    warmup-epoch: 10
+    learn-rate: 0.0001
+    loss-weight: True
+    lr-scheduler: "cosine"
+    grad-scaler: True
+
+###########
+# dataset #
+###########
+
+# -------
+dataset:
+    batch-size: 2
+    num-workers: 4
+    dataset: "Combined"    # VL_CMU_CD, PSCD
+    hflip-prob: 0.5
+    diff-augment: False
+
+##############
+# evaluation #
+##############
+
+# ----------
+evaluation:
+    # name: epoch frequency
+    trainset: 0
+
+#########
+# wandb #
+#########
+
+# ------
+wandb:
+    project: ""
+    name: ""
+    output-path: ""
+    save-checkpoint-freq: 10  # frequency
+
+########################
+# develope and testing #
+########################
+
+# --------------------
+environment:
+    dry: True
+    seed: 123
+    verbose: True
+    device: "cuda"

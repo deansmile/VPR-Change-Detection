@@ -1,0 +1,7 @@
+Obtaining file:///scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Installing collected packages: groundingdino
+  DEPRECATION: Legacy editable install of groundingdino==0.1.0 from file:///scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino (setup.py develop) is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+  Running setup.py develop for groundingdino
+Successfully installed groundingdino

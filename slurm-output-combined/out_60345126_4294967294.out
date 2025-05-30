@@ -1,0 +1,474 @@
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+start programstart program
+start program
+start program
+
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-18-14",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-18-14",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-18-14",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-18-14",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+LORA added to the encoder
+LORA added to the encoder
+LORA added to the encoder
+LORA added to the encoder
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+Unfreeze fusion_layers
+Unfreeze fusion_layers
+Unfreeze fusion_layers
+get combined dataset
+get combined datasetget combined dataset
+
+get combined dataset
+initialize cmu datasetinitialize cmu datasetinitialize cmu dataset
+
+
+initialize cmu dataset
+initialize our train datasetinitialize our train datasetinitialize our train dataset
+
+
+initialize our train dataset
+Using DistributedSampler for trainUsing DistributedSampler for trainUsing DistributedSampler for train
+
+
+Using DistributedSampler for train
+initialize cmu datasetinitialize cmu datasetinitialize cmu dataset
+
+
+initialize cmu dataset
+initialize our train dataset
+initialize our train datasetinitialize our train dataset
+initialize our train dataset
+
+Using DistributedSampler for valUsing DistributedSampler for valUsing DistributedSampler for valUsing DistributedSampler for val
+
+
+
+initialize cmu dataset
+initialize cmu datasetinitialize cmu dataset
+initialize cmu dataset
+
+initialize our test datasetinitialize our test datasetinitialize our test datasetinitialize our test dataset
+
+
+
+Using DistributedSampler for testUsing DistributedSampler for testUsing DistributedSampler for testUsing DistributedSampler for test
+
+
+
+epochs: 100
+epochs: 100    epochs: 100
+ ===== running 0 epoch =====    
+
+     epochs: 100     ===== running 0 epoch =====2025-05-09.22-18-34 
+
+
+===== running 0 epoch =====    
+         2025-05-09.22-18-34 
+ 2025-05-09.22-18-34    ===== running 0 epoch =====
+ 
+         
+         
+2025-05-09.22-18-34      
+*** train one epoch *** 
+    
+*** train one epoch ***     
+ *** train one epoch ***
+
+     *** train one epoch ***
+after set grad
+after set gradafter set grad
+after set grad
+
+after prog
+start loop
+after progafter progafter prog
+
+
+start loopstart loopstart loop
+
+
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  ['none.', 'truck. traffic cones.']
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  [' bare tree.', 'smoke or haze in the top left area.']
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  ['outdoor seating. tables. ', 'truck with takanashi logo.']
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  ['white car. bicyclist.', 'none observed.']
+                    output: output: output:  output:   torch.Size([2, 504, 504, 2]) torch.Size([2, 504, 504, 2])torch.Size([2, 504, 504, 2])  torch.Size([2, 504, 504, 2]) ->-> ->  -> torch.Size([2, 2, 504, 504])torch.Size([2, 2, 504, 504]) torch.Size([2, 2, 504, 504])
+
+torch.Size([2, 2, 504, 504])
+
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 542, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 340, in main
+    loss, data_inds, batch_losses, train_time = train_one_epoch(
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 145, in train_one_epoch
+    scaler.scale(loss).backward()
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+Traceback (most recent call last):
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/function.py", line 267, in apply
+    return user_fn(self, *args)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/checkpoint.py", line 157, in backward
+    torch.autograd.backward(outputs_with_grad, args_with_grad)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 542, in <module>
+    main(args)
+RuntimeError: Expected to mark a variable ready only once. This error is caused by one of the following reasons: 1) Use of a module parameter outside the `forward` function. Please make sure model parameters are not shared across multiple concurrent forward-backward passes. or try to use _set_static_graph() as a workaround if this module graph does not change during training loop.2) Reused parameters in multiple reentrant backward passes. For example, if you use multiple `checkpoint` functions to wrap the same part of your model, it would result in the same set of parameters been used by different reentrant backward passes multiple times, and hence marking a variable ready multiple times. DDP does not support such use cases in default. You can try to use _set_static_graph() as a workaround if your module graph does not change over iterations.
+Parameter at index 211 has been marked as ready twice. This means that multiple autograd engine  hooks have fired for this particular parameter during this iteration. You can set the environment variable TORCH_DISTRIBUTED_DEBUG to either INFO or DETAIL to print parameter names for further debugging.
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 340, in main
+    loss, data_inds, batch_losses, train_time = train_one_epoch(
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 145, in train_one_epoch
+    scaler.scale(loss).backward()
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/function.py", line 267, in apply
+    return user_fn(self, *args)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/checkpoint.py", line 157, in backward
+    torch.autograd.backward(outputs_with_grad, args_with_grad)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: Expected to mark a variable ready only once. This error is caused by one of the following reasons: 1) Use of a module parameter outside the `forward` function. Please make sure model parameters are not shared across multiple concurrent forward-backward passes. or try to use _set_static_graph() as a workaround if this module graph does not change during training loop.2) Reused parameters in multiple reentrant backward passes. For example, if you use multiple `checkpoint` functions to wrap the same part of your model, it would result in the same set of parameters been used by different reentrant backward passes multiple times, and hence marking a variable ready multiple times. DDP does not support such use cases in default. You can try to use _set_static_graph() as a workaround if your module graph does not change over iterations.
+Parameter at index 211 has been marked as ready twice. This means that multiple autograd engine  hooks have fired for this particular parameter during this iteration. You can set the environment variable TORCH_DISTRIBUTED_DEBUG to either INFO or DETAIL to print parameter names for further debugging.
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 542, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 340, in main
+    loss, data_inds, batch_losses, train_time = train_one_epoch(
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 145, in train_one_epoch
+    scaler.scale(loss).backward()
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/function.py", line 267, in apply
+    return user_fn(self, *args)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/checkpoint.py", line 157, in backward
+    torch.autograd.backward(outputs_with_grad, args_with_grad)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: Expected to mark a variable ready only once. This error is caused by one of the following reasons: 1) Use of a module parameter outside the `forward` function. Please make sure model parameters are not shared across multiple concurrent forward-backward passes. or try to use _set_static_graph() as a workaround if this module graph does not change during training loop.2) Reused parameters in multiple reentrant backward passes. For example, if you use multiple `checkpoint` functions to wrap the same part of your model, it would result in the same set of parameters been used by different reentrant backward passes multiple times, and hence marking a variable ready multiple times. DDP does not support such use cases in default. You can try to use _set_static_graph() as a workaround if your module graph does not change over iterations.
+Parameter at index 211 has been marked as ready twice. This means that multiple autograd engine  hooks have fired for this particular parameter during this iteration. You can set the environment variable TORCH_DISTRIBUTED_DEBUG to either INFO or DETAIL to print parameter names for further debugging.
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 542, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 340, in main
+    loss, data_inds, batch_losses, train_time = train_one_epoch(
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 145, in train_one_epoch
+    scaler.scale(loss).backward()
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/function.py", line 267, in apply
+    return user_fn(self, *args)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/checkpoint.py", line 157, in backward
+    torch.autograd.backward(outputs_with_grad, args_with_grad)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: Expected to mark a variable ready only once. This error is caused by one of the following reasons: 1) Use of a module parameter outside the `forward` function. Please make sure model parameters are not shared across multiple concurrent forward-backward passes. or try to use _set_static_graph() as a workaround if this module graph does not change during training loop.2) Reused parameters in multiple reentrant backward passes. For example, if you use multiple `checkpoint` functions to wrap the same part of your model, it would result in the same set of parameters been used by different reentrant backward passes multiple times, and hence marking a variable ready multiple times. DDP does not support such use cases in default. You can try to use _set_static_graph() as a workaround if your module graph does not change over iterations.
+Parameter at index 211 has been marked as ready twice. This means that multiple autograd engine  hooks have fired for this particular parameter during this iteration. You can set the environment variable TORCH_DISTRIBUTED_DEBUG to either INFO or DETAIL to print parameter names for further debugging.
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-18-14/wandb/offline-run-20250509_181814-rrx8id23[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-09.22-18-14/wandb/offline-run-20250509_181814-rrx8id23/logs[0m
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-18-14/wandb/offline-run-20250509_181814-6gv1z75q[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-09.22-18-14/wandb/offline-run-20250509_181814-6gv1z75q/logs[0m
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-18-14/wandb/offline-run-20250509_181814-xnmchc74[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-09.22-18-14/wandb/offline-run-20250509_181814-xnmchc74/logs[0m
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-18-14/wandb/offline-run-20250509_181814-5gp0cosa[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-09.22-18-14/wandb/offline-run-20250509_181814-5gp0cosa/logs[0m
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 4026648) of binary: /ext3/miniconda3/envs/rscd/bin/python
+Traceback (most recent call last):
+  File "/ext3/miniconda3/envs/rscd/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/run.py", line 762, in main
+    run(args)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/run.py", line 753, in run
+    elastic_launch(
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 246, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+src/scripts/train_para.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-09_18:18:46
+  host      : gr040.hpc.nyu.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4026649)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-09_18:18:46
+  host      : gr040.hpc.nyu.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 4026650)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-09_18:18:46
+  host      : gr040.hpc.nyu.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 4026651)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-09_18:18:46
+  host      : gr040.hpc.nyu.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 4026648)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

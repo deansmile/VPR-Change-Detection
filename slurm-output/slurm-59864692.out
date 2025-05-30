@@ -1,0 +1,73 @@
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+model
+	name: dino2 + cross_attention
+	dino-model: dinov2_vits14
+	layer1: 11
+	facet1: query
+	facet2: query
+	num-heads: 1
+	dropout-rate: 0.1
+	target-shp-row: 504
+	target-shp-col: 504
+	num-blocks: 1
+	freeze-dino: True
+	unfreeze-dino-last-n-layer: 0
+
+optimizer
+	epochs: 100
+	warmup-epoch: 10
+	learn-rate: 0.0001
+	loss-weight: True
+	lr-scheduler: cosine
+	grad-scaler: True
+
+dataset
+	batch-size: 4
+	num-workers: 4
+	dataset: VL_CMU_CD
+	hflip-prob: 0.5
+	diff-augment: False
+	figsize: None
+
+evaluation
+	trainset: 0
+
+wandb
+	project: 
+	name: 
+	output-path: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-04-23.13-25-47
+	save-checkpoint-freq: 10
+
+environment
+	dry: True
+	seed: 123
+	verbose: True
+	device: cuda
+
+eval_path:  /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-04-23.13-25-47/eval.best.val.json
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+<All keys matched successfully>
+initialize our test dataset
+changed object text description
+
+Evaluate on VL-CMU-CD (test)
+
+{
+    "epoch": 95,
+    "VL-CMU-CD": {
+        "test": {
+            "VL-CMU-CD": {
+                "precision": 0.598420605958376,
+                "recall": 0.6885593903767276,
+                "accuracy": 0.9269450365331316,
+                "f1_score": 0.5927563636974031
+            }
+        }
+    }
+}

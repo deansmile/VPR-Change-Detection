@@ -1,0 +1,21 @@
+# general
+matplotlib
+notebook
+numpy
+pandas
+Pillow
+requests
+
+# maintenance
+black
+isort
+
+# compression and decompression for pcd.py
+lzf
+
+# data repository
+dill
+
+# deep learning
+torch
+torchvision

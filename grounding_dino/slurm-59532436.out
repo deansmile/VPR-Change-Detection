@@ -1,0 +1,174 @@
+Obtaining file:///scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Installing collected packages: groundingdino
+  DEPRECATION: Legacy editable install of groundingdino==0.1.0 from file:///scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino (setup.py develop) is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+  Running setup.py develop for groundingdino
+    error: subprocess-exited-with-error
+    
+    × python setup.py develop did not run successfully.
+    │ exit code: 1
+    ╰─> [76 lines of output]
+        Building wheel groundingdino-0.1.0
+        Compiling with CUDA
+        running develop
+        /ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+        !!
+        
+                ********************************************************************************
+                Please avoid running ``setup.py`` and ``easy_install``.
+                Instead, use pypa/build, pypa/installer or other
+                standards-based tools.
+        
+                See https://github.com/pypa/setuptools/issues/917 for details.
+                ********************************************************************************
+        
+        !!
+          easy_install.initialize_options(self)
+        /ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/cmd.py:79: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+        !!
+        
+                ********************************************************************************
+                Please avoid running ``setup.py`` directly.
+                Instead, use pypa/build, pypa/installer or other
+                standards-based tools.
+        
+                See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+                ********************************************************************************
+        
+        !!
+          self.initialize_options()
+        running egg_info
+        writing groundingdino.egg-info/PKG-INFO
+        writing dependency_links to groundingdino.egg-info/dependency_links.txt
+        writing top-level names to groundingdino.egg-info/top_level.txt
+        reading manifest file 'groundingdino.egg-info/SOURCES.txt'
+        adding license file 'LICENSE'
+        writing manifest file 'groundingdino.egg-info/SOURCES.txt'
+        running build_ext
+        Traceback (most recent call last):
+          File "<string>", line 2, in <module>
+          File "<pip-setuptools-caller>", line 34, in <module>
+          File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/setup.py", line 208, in <module>
+            setup(
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/__init__.py", line 117, in setup
+            return distutils.core.setup(**attrs)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 186, in setup
+            return run_commands(dist)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+            dist.run_commands()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 983, in run_commands
+            self.run_command(cmd)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/dist.py", line 999, in run_command
+            super().run_command(command)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+            cmd_obj.run()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/command/develop.py", line 35, in run
+            self.install_for_development()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/command/develop.py", line 112, in install_for_development
+            self.run_command('build_ext')
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/cmd.py", line 339, in run_command
+            self.distribution.run_command(command)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/dist.py", line 999, in run_command
+            super().run_command(command)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+            cmd_obj.run()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/command/build_ext.py", line 99, in run
+            _build_ext.run(self)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 365, in run
+            self.build_extensions()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 499, in build_extensions
+            _check_cuda_version(compiler_name, compiler_version)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 386, in _check_cuda_version
+            raise RuntimeError(CUDA_MISMATCH_MESSAGE.format(cuda_str_version, torch.version.cuda))
+        RuntimeError:
+        The detected CUDA version (12.1) mismatches the version that was used to compile
+        PyTorch (11.7). Please make sure to use the same CUDA versions.
+        
+        [end of output]
+    
+    note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× python setup.py develop did not run successfully.
+│ exit code: 1
+╰─> [76 lines of output]
+    Building wheel groundingdino-0.1.0
+    Compiling with CUDA
+    running develop
+    /ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+    !!
+    
+            ********************************************************************************
+            Please avoid running ``setup.py`` and ``easy_install``.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+    
+            See https://github.com/pypa/setuptools/issues/917 for details.
+            ********************************************************************************
+    
+    !!
+      easy_install.initialize_options(self)
+    /ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/cmd.py:79: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+    !!
+    
+            ********************************************************************************
+            Please avoid running ``setup.py`` directly.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+    
+            See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+            ********************************************************************************
+    
+    !!
+      self.initialize_options()
+    running egg_info
+    writing groundingdino.egg-info/PKG-INFO
+    writing dependency_links to groundingdino.egg-info/dependency_links.txt
+    writing top-level names to groundingdino.egg-info/top_level.txt
+    reading manifest file 'groundingdino.egg-info/SOURCES.txt'
+    adding license file 'LICENSE'
+    writing manifest file 'groundingdino.egg-info/SOURCES.txt'
+    running build_ext
+    Traceback (most recent call last):
+      File "<string>", line 2, in <module>
+      File "<pip-setuptools-caller>", line 34, in <module>
+      File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/setup.py", line 208, in <module>
+        setup(
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/__init__.py", line 117, in setup
+        return distutils.core.setup(**attrs)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 186, in setup
+        return run_commands(dist)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+        dist.run_commands()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 983, in run_commands
+        self.run_command(cmd)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/dist.py", line 999, in run_command
+        super().run_command(command)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+        cmd_obj.run()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/command/develop.py", line 35, in run
+        self.install_for_development()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/command/develop.py", line 112, in install_for_development
+        self.run_command('build_ext')
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/cmd.py", line 339, in run_command
+        self.distribution.run_command(command)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/dist.py", line 999, in run_command
+        super().run_command(command)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+        cmd_obj.run()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/command/build_ext.py", line 99, in run
+        _build_ext.run(self)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 365, in run
+        self.build_extensions()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 499, in build_extensions
+        _check_cuda_version(compiler_name, compiler_version)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 386, in _check_cuda_version
+        raise RuntimeError(CUDA_MISMATCH_MESSAGE.format(cuda_str_version, torch.version.cuda))
+    RuntimeError:
+    The detected CUDA version (12.1) mismatches the version that was used to compile
+    PyTorch (11.7). Please make sure to use the same CUDA versions.
+    
+    [end of output]
+
+note: This error originates from a subprocess, and is likely not a problem with pip.

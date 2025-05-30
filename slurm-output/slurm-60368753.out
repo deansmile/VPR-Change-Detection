@@ -1,0 +1,57 @@
+model
+	name: dino2 + cross_attention
+	dino-model: dinov2_vits14
+	layer1: 11
+	facet1: query
+	facet2: query
+	num-heads: 1
+	dropout-rate: 0.1
+	target-shp-row: 504
+	target-shp-col: 504
+	num-blocks: 1
+	freeze-dino: True
+	unfreeze-dino-last-n-layer: 0
+
+optimizer
+	epochs: 100
+	early-stop: 5
+	warmup-epoch: 10
+	learn-rate: 0.0001
+	loss-weight: True
+	lr-scheduler: cosine
+	grad-scaler: True
+
+dataset
+	batch-size: 2
+	num-workers: 4
+	dataset: Combined
+	hflip-prob: 0.5
+	diff-augment: False
+	figsize: None
+
+evaluation
+	trainset: 0
+
+wandb
+	project: 
+	name: 
+	output-path: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-48-37
+	save-checkpoint-freq: 10
+
+environment
+	dry: True
+	seed: 123
+	verbose: True
+	device: cuda
+
+eval_path:  /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-48-37/eval.best.val.json
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/evaluate.py", line 531, in <module>
+    main(path)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/evaluate.py", line 484, in main
+    OurDataset_Test(path, evals)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/evaluate.py", line 176, in OurDataset_Test
+    model = get_model(path, dataset="Our")
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/evaluate.py", line 156, in get_model
+    raise ValueError(f"dataset {dataset} not supported")
+ValueError: dataset Our not supported

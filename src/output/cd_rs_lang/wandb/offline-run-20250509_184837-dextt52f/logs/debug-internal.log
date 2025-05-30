@@ -1,0 +1,7 @@
+{"time":"2025-05-09T18:48:37.884190867-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-48-37/wandb/offline-run-20250509_184837-dextt52f/logs/debug-core.log"}
+{"time":"2025-05-09T18:48:38.104433046-04:00","level":"INFO","msg":"created new stream","id":"dextt52f"}
+{"time":"2025-05-09T18:48:38.104471062-04:00","level":"INFO","msg":"stream: started","id":"dextt52f"}
+{"time":"2025-05-09T18:48:38.104486259-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"dextt52f"}
+{"time":"2025-05-09T18:48:38.104502146-04:00","level":"INFO","msg":"handler: started","stream_id":"dextt52f"}
+{"time":"2025-05-09T18:48:38.104517457-04:00","level":"INFO","msg":"sender: started","stream_id":"dextt52f"}
+{"time":"2025-05-09T18:48:38.108947777-04:00","level":"INFO","msg":"Starting system monitor"}

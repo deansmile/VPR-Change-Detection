@@ -1,0 +1,76 @@
+wandb: WARNING Unable to verify login in offline mode.
+wandb: Tracking run with wandb version 0.19.10
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+start program
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.15-20-22",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+LORA added to the encoder
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+get combined dataset
+initialize cmu dataset
+initialize our train dataset
+initialize cmu dataset
+initialize our train dataset
+initialize cmu dataset
+initialize our test dataset
+epochs: 100
+     ===== running 0 epoch =====
+     2025-05-09.15-20-42
+     
+     *** train one epoch ***
+after set grad
+after prog
+start loop
+slurmstepd: error: *** JOB 60325095 ON gr006 CANCELLED AT 2025-05-09T11:25:28 ***

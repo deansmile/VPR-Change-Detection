@@ -1,0 +1,543 @@
+Collecting torch (from -r requirements.txt (line 1))
+  Downloading torch-2.6.0-cp310-cp310-manylinux1_x86_64.whl.metadata (28 kB)
+Collecting torchvision (from -r requirements.txt (line 2))
+  Downloading torchvision-0.21.0-cp310-cp310-manylinux1_x86_64.whl.metadata (6.1 kB)
+Collecting transformers==4.30.2 (from -r requirements.txt (line 3))
+  Downloading transformers-4.30.2-py3-none-any.whl.metadata (113 kB)
+Collecting addict (from -r requirements.txt (line 4))
+  Downloading addict-2.4.0-py3-none-any.whl.metadata (1.0 kB)
+Collecting yapf (from -r requirements.txt (line 5))
+  Downloading yapf-0.43.0-py3-none-any.whl.metadata (46 kB)
+Collecting timm (from -r requirements.txt (line 6))
+  Downloading timm-1.0.15-py3-none-any.whl.metadata (52 kB)
+Collecting numpy (from -r requirements.txt (line 7))
+  Downloading numpy-2.2.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Collecting opencv-python (from -r requirements.txt (line 8))
+  Downloading opencv_python-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting supervision>=0.22.0 (from -r requirements.txt (line 9))
+  Downloading supervision-0.25.1-py3-none-any.whl.metadata (14 kB)
+Collecting pycocotools (from -r requirements.txt (line 10))
+  Downloading pycocotools-2.0.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.1 kB)
+Collecting filelock (from transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting huggingface-hub<1.0,>=0.14.1 (from transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading huggingface_hub-0.30.2-py3-none-any.whl.metadata (13 kB)
+Collecting packaging>=20.0 (from transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pyyaml>=5.1 (from transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting regex!=2019.12.17 (from transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading regex-2024.11.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)
+Collecting requests (from transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting tokenizers!=0.11.3,<0.14,>=0.11.1 (from transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading tokenizers-0.13.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting safetensors>=0.3.1 (from transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading safetensors-0.5.3-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Collecting tqdm>=4.27 (from transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting typing-extensions>=4.10.0 (from torch->-r requirements.txt (line 1))
+  Downloading typing_extensions-4.13.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting networkx (from torch->-r requirements.txt (line 1))
+  Downloading networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting jinja2 (from torch->-r requirements.txt (line 1))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec (from torch->-r requirements.txt (line 1))
+  Downloading fsspec-2025.3.2-py3-none-any.whl.metadata (11 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.4.127 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu12==12.4.127 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu12==12.4.127 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cudnn-cu12==9.1.0.70 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cublas-cu12==12.4.5.8 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cufft-cu12==11.2.1.3 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu12==10.3.5.147 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu12==11.6.1.9 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu12==12.3.1.170 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparselt-cu12==0.6.2 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting nvidia-nccl-cu12==2.21.5 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvtx-cu12==12.4.127 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-nvjitlink-cu12==12.4.127 (from torch->-r requirements.txt (line 1))
+  Downloading nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting triton==3.2.0 (from torch->-r requirements.txt (line 1))
+  Downloading triton-3.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+Collecting sympy==1.13.1 (from torch->-r requirements.txt (line 1))
+  Downloading sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy==1.13.1->torch->-r requirements.txt (line 1))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting pillow!=8.3.*,>=5.3.0 (from torchvision->-r requirements.txt (line 2))
+  Downloading pillow-11.2.1-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+Collecting platformdirs>=3.5.1 (from yapf->-r requirements.txt (line 5))
+  Downloading platformdirs-4.3.7-py3-none-any.whl.metadata (11 kB)
+Collecting tomli>=2.0.1 (from yapf->-r requirements.txt (line 5))
+  Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+Collecting contourpy>=1.0.7 (from supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+Collecting defusedxml<0.8.0,>=0.7.1 (from supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting matplotlib>=3.6.0 (from supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading matplotlib-3.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting scipy<2.0.0,>=1.10.0 (from supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading scipy-1.15.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.6.0->supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.6.0->supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading fonttools-4.57.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (102 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.6.0->supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading kiwisolver-1.4.8-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.2 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib>=3.6.0->supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.6.0->supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting charset-normalizer<4,>=2 (from requests->transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests->transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading urllib3-2.4.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests->transformers==4.30.2->-r requirements.txt (line 3))
+  Downloading certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch->-r requirements.txt (line 1))
+  Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=3.6.0->supervision>=0.22.0->-r requirements.txt (line 9))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading transformers-4.30.2-py3-none-any.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 394.1 MB/s eta 0:00:00
+Downloading torch-2.6.0-cp310-cp310-manylinux1_x86_64.whl (766.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 766.7/766.7 MB 306.8 MB/s eta 0:00:00
+Downloading nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl (363.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 398.7 MB/s eta 0:00:00
+Downloading nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (13.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 626.3 MB/s eta 0:00:00
+Downloading nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (24.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 165.8 MB/s eta 0:00:00
+Downloading nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (883 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 107.0 MB/s eta 0:00:00
+Downloading nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl (664.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 302.5 MB/s eta 0:00:00
+Downloading nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl (211.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.5/211.5 MB 411.2 MB/s eta 0:00:00
+Downloading nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl (56.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 432.4 MB/s eta 0:00:00
+Downloading nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl (127.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.9/127.9 MB 398.4 MB/s eta 0:00:00
+Downloading nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl (207.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.5/207.5 MB 300.7 MB/s eta 0:00:00
+Downloading nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl (150.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.1/150.1 MB 196.9 MB/s eta 0:00:00
+Downloading nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl (188.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 284.3 MB/s eta 0:00:00
+Downloading nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 298.0 MB/s eta 0:00:00
+Downloading nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (99 kB)
+Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 586.6 MB/s eta 0:00:00
+Downloading triton-3.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (253.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 253.1/253.1 MB 424.3 MB/s eta 0:00:00
+Downloading torchvision-0.21.0-cp310-cp310-manylinux1_x86_64.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 360.5 MB/s eta 0:00:00
+Downloading addict-2.4.0-py3-none-any.whl (3.8 kB)
+Downloading yapf-0.43.0-py3-none-any.whl (256 kB)
+Downloading timm-1.0.15-py3-none-any.whl (2.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 819.8 MB/s eta 0:00:00
+Downloading numpy-2.2.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.4/16.4 MB 230.4 MB/s eta 0:00:00
+Downloading opencv_python-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (63.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.0/63.0 MB 371.4 MB/s eta 0:00:00
+Downloading supervision-0.25.1-py3-none-any.whl (181 kB)
+Downloading pycocotools-2.0.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (427 kB)
+Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Downloading huggingface_hub-0.30.2-py3-none-any.whl (481 kB)
+Downloading fsspec-2025.3.2-py3-none-any.whl (194 kB)
+Downloading matplotlib-3.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 460.7 MB/s eta 0:00:00
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Downloading pillow-11.2.1-cp310-cp310-manylinux_2_28_x86_64.whl (4.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 237.1 MB/s eta 0:00:00
+Downloading platformdirs-4.3.7-py3-none-any.whl (18 kB)
+Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 590.4 MB/s eta 0:00:00
+Downloading regex-2024.11.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (781 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 781.7/781.7 kB 609.6 MB/s eta 0:00:00
+Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+Downloading safetensors-0.5.3-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (471 kB)
+Downloading scipy-1.15.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.6/37.6 MB 355.1 MB/s eta 0:00:00
+Downloading tokenizers-0.13.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 324.7 MB/s eta 0:00:00
+Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading typing_extensions-4.13.2-py3-none-any.whl (45 kB)
+Downloading filelock-3.18.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 501.2 MB/s eta 0:00:00
+Downloading certifi-2025.1.31-py3-none-any.whl (166 kB)
+Downloading charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (146 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.57.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 646.1 MB/s eta 0:00:00
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+Downloading kiwisolver-1.4.8-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 371.4 MB/s eta 0:00:00
+Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 250.7 MB/s eta 0:00:00
+Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading urllib3-2.4.0-py3-none-any.whl (128 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: triton, tokenizers, nvidia-cusparselt-cu12, mpmath, addict, urllib3, typing-extensions, tqdm, tomli, sympy, six, safetensors, regex, pyyaml, pyparsing, platformdirs, pillow, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, MarkupSafe, kiwisolver, idna, fsspec, fonttools, filelock, defusedxml, cycler, charset-normalizer, certifi, yapf, scipy, requests, python-dateutil, opencv-python, nvidia-cusparse-cu12, nvidia-cudnn-cu12, jinja2, contourpy, nvidia-cusolver-cu12, matplotlib, huggingface-hub, transformers, torch, supervision, pycocotools, torchvision, timm
+Successfully installed MarkupSafe-3.0.2 addict-2.4.0 certifi-2025.1.31 charset-normalizer-3.4.1 contourpy-1.3.2 cycler-0.12.1 defusedxml-0.7.1 filelock-3.18.0 fonttools-4.57.0 fsspec-2025.3.2 huggingface-hub-0.30.2 idna-3.10 jinja2-3.1.6 kiwisolver-1.4.8 matplotlib-3.10.1 mpmath-1.3.0 networkx-3.4.2 numpy-2.2.5 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-cusparselt-cu12-0.6.2 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 opencv-python-4.11.0.86 packaging-25.0 pillow-11.2.1 platformdirs-4.3.7 pycocotools-2.0.8 pyparsing-3.2.3 python-dateutil-2.9.0.post0 pyyaml-6.0.2 regex-2024.11.6 requests-2.32.3 safetensors-0.5.3 scipy-1.15.2 six-1.17.0 supervision-0.25.1 sympy-1.13.1 timm-1.0.15 tokenizers-0.13.3 tomli-2.2.1 torch-2.6.0 torchvision-0.21.0 tqdm-4.67.1 transformers-4.30.2 triton-3.2.0 typing-extensions-4.13.2 urllib3-2.4.0 yapf-0.43.0
+Obtaining file:///scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Installing collected packages: groundingdino
+  DEPRECATION: Legacy editable install of groundingdino==0.1.0 from file:///scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino (setup.py develop) is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+  Running setup.py develop for groundingdino
+    error: subprocess-exited-with-error
+    
+    × python setup.py develop did not run successfully.
+    │ exit code: 1
+    ╰─> [159 lines of output]
+        Building wheel groundingdino-0.1.0
+        Compiling with CUDA
+        running develop
+        /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+        !!
+        
+                ********************************************************************************
+                Please avoid running ``setup.py`` and ``easy_install``.
+                Instead, use pypa/build, pypa/installer or other
+                standards-based tools.
+        
+                See https://github.com/pypa/setuptools/issues/917 for details.
+                ********************************************************************************
+        
+        !!
+          easy_install.initialize_options(self)
+        /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:79: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+        !!
+        
+                ********************************************************************************
+                Please avoid running ``setup.py`` directly.
+                Instead, use pypa/build, pypa/installer or other
+                standards-based tools.
+        
+                See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+                ********************************************************************************
+        
+        !!
+          self.initialize_options()
+        running egg_info
+        writing groundingdino.egg-info/PKG-INFO
+        writing dependency_links to groundingdino.egg-info/dependency_links.txt
+        writing top-level names to groundingdino.egg-info/top_level.txt
+        reading manifest file 'groundingdino.egg-info/SOURCES.txt'
+        adding license file 'LICENSE'
+        writing manifest file 'groundingdino.egg-info/SOURCES.txt'
+        running build_ext
+        /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py:448: UserWarning: The detected CUDA version (12.1) has a minor version mismatch with the version that was used to compile PyTorch (12.4). Most likely this shouldn't be a problem.
+          warnings.warn(CUDA_MISMATCH_WARN.format(cuda_str_version, torch.version.cuda))
+        /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py:458: UserWarning: There are no g++ version bounds defined for CUDA version 12.1
+          warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+        building 'groundingdino._C' extension
+        creating /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn
+        Emitting ninja build file /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/build.ninja...
+        Compiling objects...
+        Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+        [1/4] /usr/local/cuda-12.1/bin/nvcc --generate-dependencies-with-compile --dependency-output /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/cuda_version.o.d -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/cuda_version.cu -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/cuda_version.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=sm_86 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+        [2/4] c++ -MMD -MF /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.o.d -pthread -B /ext3/miniconda3/envs/rscd/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /ext3/miniconda3/envs/rscd/include -fPIC -O2 -isystem /ext3/miniconda3/envs/rscd/include -fPIC -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.cpp -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+        [3/4] /usr/local/cuda-12.1/bin/nvcc --generate-dependencies-with-compile --dependency-output /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o.d -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=sm_86 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+        FAILED: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o
+        /usr/local/cuda-12.1/bin/nvcc --generate-dependencies-with-compile --dependency-output /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o.d -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=sm_86 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+        /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu(65): error: no suitable conversion function from "const at::DeprecatedTypeProperties" to "c10::ScalarType" exists
+                  [&] { const auto& the_type = value.type(); constexpr const char* at_dispatch_name = "ms_deform_attn_forward_cuda"; at::ScalarType _st = ::detail::scalar_type(the_type); ; switch (_st) { case at::ScalarType::Double: { do { if constexpr (!at::should_include_kernel_dtype( at_dispatch_name, at::ScalarType::Double)) { if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(65), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", "dtype '", toString(at::ScalarType::Double), "' not selected for kernel tag ", at_dispatch_name))); }; } } while (0); using scalar_t [[maybe_unused]] = c10::impl::ScalarTypeToCPPTypeT<at::ScalarType::Double>; return ([&] { ms_deformable_im2col_cuda(at::cuda::getCurrentCUDAStream(), value.data<scalar_t>() + n * im2col_step_ * per_value_size, spatial_shapes.data<int64_t>(), level_start_index.data<int64_t>(), sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size, batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point, columns.data<scalar_t>()); })(); } case at::ScalarType::Float: { do { if constexpr (!at::should_include_kernel_dtype( at_dispatch_name, at::ScalarType::Float)) { if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(65), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", "dtype '", toString(at::ScalarType::Float), "' not selected for kernel tag ", at_dispatch_name))); }; } } while (0); using scalar_t [[maybe_unused]] = c10::impl::ScalarTypeToCPPTypeT<at::ScalarType::Float>; return ([&] { ms_deformable_im2col_cuda(at::cuda::getCurrentCUDAStream(), value.data<scalar_t>() + n * im2col_step_ * per_value_size, spatial_shapes.data<int64_t>(), level_start_index.data<int64_t>(), sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size, batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point, columns.data<scalar_t>()); })(); } default: if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(65), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", '"', at_dispatch_name, "\" not implemented for '", toString(_st), "'"))); }; } }()
+                                                                                                                                                                                ^
+        
+        /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu(135): error: no suitable conversion function from "const at::DeprecatedTypeProperties" to "c10::ScalarType" exists
+                  [&] { const auto& the_type = value.type(); constexpr const char* at_dispatch_name = "ms_deform_attn_backward_cuda"; at::ScalarType _st = ::detail::scalar_type(the_type); ; switch (_st) { case at::ScalarType::Double: { do { if constexpr (!at::should_include_kernel_dtype( at_dispatch_name, at::ScalarType::Double)) { if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(135), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", "dtype '", toString(at::ScalarType::Double), "' not selected for kernel tag ", at_dispatch_name))); }; } } while (0); using scalar_t [[maybe_unused]] = c10::impl::ScalarTypeToCPPTypeT<at::ScalarType::Double>; return ([&] { ms_deformable_col2im_cuda(at::cuda::getCurrentCUDAStream(), grad_output_g.data<scalar_t>(), value.data<scalar_t>() + n * im2col_step_ * per_value_size, spatial_shapes.data<int64_t>(), level_start_index.data<int64_t>(), sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size, batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point, grad_value.data<scalar_t>() + n * im2col_step_ * per_value_size, grad_sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, grad_attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size); })(); } case at::ScalarType::Float: { do { if constexpr (!at::should_include_kernel_dtype( at_dispatch_name, at::ScalarType::Float)) { if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(135), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", "dtype '", toString(at::ScalarType::Float), "' not selected for kernel tag ", at_dispatch_name))); }; } } while (0); using scalar_t [[maybe_unused]] = c10::impl::ScalarTypeToCPPTypeT<at::ScalarType::Float>; return ([&] { ms_deformable_col2im_cuda(at::cuda::getCurrentCUDAStream(), grad_output_g.data<scalar_t>(), value.data<scalar_t>() + n * im2col_step_ * per_value_size, spatial_shapes.data<int64_t>(), level_start_index.data<int64_t>(), sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size, batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point, grad_value.data<scalar_t>() + n * im2col_step_ * per_value_size, grad_sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, grad_attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size); })(); } default: if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(135), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", '"', at_dispatch_name, "\" not implemented for '", toString(_st), "'"))); }; } }()
+                                                                                                                                                                                 ^
+        
+        2 errors detected in the compilation of "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu".
+        [4/4] c++ -MMD -MF /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.o.d -pthread -B /ext3/miniconda3/envs/rscd/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /ext3/miniconda3/envs/rscd/include -fPIC -O2 -isystem /ext3/miniconda3/envs/rscd/include -fPIC -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+        In file included from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp:3:
+        /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h: In function 'at::Tensor groundingdino::ms_deform_attn_forward(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, int)':
+        /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h:30:19: warning: 'at::DeprecatedTypeProperties& at::Tensor::type() const' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+           30 |     if (value.type().is_cuda())
+              |         ~~~~~~~~~~^~
+        In file included from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/core/Tensor.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/Tensor.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/extension.h:5,
+                         from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.h:12,
+                         from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h:13,
+                         from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp:3:
+        /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:225:30: note: declared here
+          225 |   DeprecatedTypeProperties & type() const {
+              |                              ^~~~
+        In file included from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp:3:
+        /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h: In function 'std::vector<at::Tensor> groundingdino::ms_deform_attn_backward(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, int)':
+        /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h:52:19: warning: 'at::DeprecatedTypeProperties& at::Tensor::type() const' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+           52 |     if (value.type().is_cuda())
+              |         ~~~~~~~~~~^~
+        In file included from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/core/Tensor.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/Tensor.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                         from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/extension.h:5,
+                         from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.h:12,
+                         from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h:13,
+                         from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp:3:
+        /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:225:30: note: declared here
+          225 |   DeprecatedTypeProperties & type() const {
+              |                              ^~~~
+        ninja: build stopped: subcommand failed.
+        Traceback (most recent call last):
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2209, in _run_ninja_build
+            subprocess.run(
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/subprocess.py", line 526, in run
+            raise CalledProcessError(retcode, process.args,
+        subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+        
+        The above exception was the direct cause of the following exception:
+        
+        Traceback (most recent call last):
+          File "<string>", line 2, in <module>
+          File "<pip-setuptools-caller>", line 34, in <module>
+          File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/setup.py", line 208, in <module>
+            setup(
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup
+            return distutils.core.setup(**attrs)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 186, in setup
+            return run_commands(dist)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+            dist.run_commands()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 983, in run_commands
+            self.run_command(cmd)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/dist.py", line 999, in run_command
+            super().run_command(command)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+            cmd_obj.run()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/develop.py", line 35, in run
+            self.install_for_development()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/develop.py", line 112, in install_for_development
+            self.run_command('build_ext')
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/cmd.py", line 339, in run_command
+            self.distribution.run_command(command)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/dist.py", line 999, in run_command
+            super().run_command(command)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+            cmd_obj.run()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/build_ext.py", line 99, in run
+            _build_ext.run(self)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 365, in run
+            self.build_extensions()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 900, in build_extensions
+            build_ext.build_extensions(self)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 481, in build_extensions
+            self._build_extensions_serial()
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 507, in _build_extensions_serial
+            self.build_extension(ext)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/build_ext.py", line 264, in build_extension
+            _build_ext.build_extension(self, ext)
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 562, in build_extension
+            objects = self.compiler.compile(
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 713, in unix_wrap_ninja_compile
+            _write_ninja_file_and_compile_objects(
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1869, in _write_ninja_file_and_compile_objects
+            _run_ninja_build(
+          File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2225, in _run_ninja_build
+            raise RuntimeError(message) from e
+        RuntimeError: Error compiling objects for extension
+        [end of output]
+    
+    note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× python setup.py develop did not run successfully.
+│ exit code: 1
+╰─> [159 lines of output]
+    Building wheel groundingdino-0.1.0
+    Compiling with CUDA
+    running develop
+    /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+    !!
+    
+            ********************************************************************************
+            Please avoid running ``setup.py`` and ``easy_install``.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+    
+            See https://github.com/pypa/setuptools/issues/917 for details.
+            ********************************************************************************
+    
+    !!
+      easy_install.initialize_options(self)
+    /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:79: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+    !!
+    
+            ********************************************************************************
+            Please avoid running ``setup.py`` directly.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+    
+            See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+            ********************************************************************************
+    
+    !!
+      self.initialize_options()
+    running egg_info
+    writing groundingdino.egg-info/PKG-INFO
+    writing dependency_links to groundingdino.egg-info/dependency_links.txt
+    writing top-level names to groundingdino.egg-info/top_level.txt
+    reading manifest file 'groundingdino.egg-info/SOURCES.txt'
+    adding license file 'LICENSE'
+    writing manifest file 'groundingdino.egg-info/SOURCES.txt'
+    running build_ext
+    /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py:448: UserWarning: The detected CUDA version (12.1) has a minor version mismatch with the version that was used to compile PyTorch (12.4). Most likely this shouldn't be a problem.
+      warnings.warn(CUDA_MISMATCH_WARN.format(cuda_str_version, torch.version.cuda))
+    /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py:458: UserWarning: There are no g++ version bounds defined for CUDA version 12.1
+      warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+    building 'groundingdino._C' extension
+    creating /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn
+    Emitting ninja build file /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/build.ninja...
+    Compiling objects...
+    Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+    [1/4] /usr/local/cuda-12.1/bin/nvcc --generate-dependencies-with-compile --dependency-output /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/cuda_version.o.d -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/cuda_version.cu -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/cuda_version.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=sm_86 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+    [2/4] c++ -MMD -MF /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.o.d -pthread -B /ext3/miniconda3/envs/rscd/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /ext3/miniconda3/envs/rscd/include -fPIC -O2 -isystem /ext3/miniconda3/envs/rscd/include -fPIC -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.cpp -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+    [3/4] /usr/local/cuda-12.1/bin/nvcc --generate-dependencies-with-compile --dependency-output /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o.d -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=sm_86 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+    FAILED: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o
+    /usr/local/cuda-12.1/bin/nvcc --generate-dependencies-with-compile --dependency-output /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o.d -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_86,code=sm_86 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+    /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu(65): error: no suitable conversion function from "const at::DeprecatedTypeProperties" to "c10::ScalarType" exists
+              [&] { const auto& the_type = value.type(); constexpr const char* at_dispatch_name = "ms_deform_attn_forward_cuda"; at::ScalarType _st = ::detail::scalar_type(the_type); ; switch (_st) { case at::ScalarType::Double: { do { if constexpr (!at::should_include_kernel_dtype( at_dispatch_name, at::ScalarType::Double)) { if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(65), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", "dtype '", toString(at::ScalarType::Double), "' not selected for kernel tag ", at_dispatch_name))); }; } } while (0); using scalar_t [[maybe_unused]] = c10::impl::ScalarTypeToCPPTypeT<at::ScalarType::Double>; return ([&] { ms_deformable_im2col_cuda(at::cuda::getCurrentCUDAStream(), value.data<scalar_t>() + n * im2col_step_ * per_value_size, spatial_shapes.data<int64_t>(), level_start_index.data<int64_t>(), sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size, batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point, columns.data<scalar_t>()); })(); } case at::ScalarType::Float: { do { if constexpr (!at::should_include_kernel_dtype( at_dispatch_name, at::ScalarType::Float)) { if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(65), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", "dtype '", toString(at::ScalarType::Float), "' not selected for kernel tag ", at_dispatch_name))); }; } } while (0); using scalar_t [[maybe_unused]] = c10::impl::ScalarTypeToCPPTypeT<at::ScalarType::Float>; return ([&] { ms_deformable_im2col_cuda(at::cuda::getCurrentCUDAStream(), value.data<scalar_t>() + n * im2col_step_ * per_value_size, spatial_shapes.data<int64_t>(), level_start_index.data<int64_t>(), sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size, batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point, columns.data<scalar_t>()); })(); } default: if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(65), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", '"', at_dispatch_name, "\" not implemented for '", toString(_st), "'"))); }; } }()
+                                                                                                                                                                            ^
+    
+    /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu(135): error: no suitable conversion function from "const at::DeprecatedTypeProperties" to "c10::ScalarType" exists
+              [&] { const auto& the_type = value.type(); constexpr const char* at_dispatch_name = "ms_deform_attn_backward_cuda"; at::ScalarType _st = ::detail::scalar_type(the_type); ; switch (_st) { case at::ScalarType::Double: { do { if constexpr (!at::should_include_kernel_dtype( at_dispatch_name, at::ScalarType::Double)) { if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(135), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", "dtype '", toString(at::ScalarType::Double), "' not selected for kernel tag ", at_dispatch_name))); }; } } while (0); using scalar_t [[maybe_unused]] = c10::impl::ScalarTypeToCPPTypeT<at::ScalarType::Double>; return ([&] { ms_deformable_col2im_cuda(at::cuda::getCurrentCUDAStream(), grad_output_g.data<scalar_t>(), value.data<scalar_t>() + n * im2col_step_ * per_value_size, spatial_shapes.data<int64_t>(), level_start_index.data<int64_t>(), sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size, batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point, grad_value.data<scalar_t>() + n * im2col_step_ * per_value_size, grad_sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, grad_attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size); })(); } case at::ScalarType::Float: { do { if constexpr (!at::should_include_kernel_dtype( at_dispatch_name, at::ScalarType::Float)) { if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(135), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", "dtype '", toString(at::ScalarType::Float), "' not selected for kernel tag ", at_dispatch_name))); }; } } while (0); using scalar_t [[maybe_unused]] = c10::impl::ScalarTypeToCPPTypeT<at::ScalarType::Float>; return ([&] { ms_deformable_col2im_cuda(at::cuda::getCurrentCUDAStream(), grad_output_g.data<scalar_t>(), value.data<scalar_t>() + n * im2col_step_ * per_value_size, spatial_shapes.data<int64_t>(), level_start_index.data<int64_t>(), sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size, batch_n, spatial_size, num_heads, channels, num_levels, num_query, num_point, grad_value.data<scalar_t>() + n * im2col_step_ * per_value_size, grad_sampling_loc.data<scalar_t>() + n * im2col_step_ * per_sample_loc_size, grad_attn_weight.data<scalar_t>() + n * im2col_step_ * per_attn_weight_size); })(); } default: if (!(false)) { ::c10::detail::torchCheckFail( __func__, "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu", static_cast<uint32_t>(135), (::c10::detail::torchCheckMsgImpl( "Expected " "false" " to be true, but got false.  " "(Could this error message be improved?  If so, " "please report an enhancement request to PyTorch.)", '"', at_dispatch_name, "\" not implemented for '", toString(_st), "'"))); }; } }()
+                                                                                                                                                                             ^
+    
+    2 errors detected in the compilation of "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu".
+    [4/4] c++ -MMD -MF /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.o.d -pthread -B /ext3/miniconda3/envs/rscd/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /ext3/miniconda3/envs/rscd/include -fPIC -O2 -isystem /ext3/miniconda3/envs/rscd/include -fPIC -DWITH_CUDA -I/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/TH -I/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-12.1/include -I/ext3/miniconda3/envs/rscd/include/python3.10 -c -c /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp -o /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/build/temp.linux-x86_64-cpython-310/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+    In file included from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp:3:
+    /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h: In function 'at::Tensor groundingdino::ms_deform_attn_forward(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, int)':
+    /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h:30:19: warning: 'at::DeprecatedTypeProperties& at::Tensor::type() const' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       30 |     if (value.type().is_cuda())
+          |         ~~~~~~~~~~^~
+    In file included from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/core/Tensor.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/Tensor.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/extension.h:5,
+                     from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.h:12,
+                     from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h:13,
+                     from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp:3:
+    /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:225:30: note: declared here
+      225 |   DeprecatedTypeProperties & type() const {
+          |                              ^~~~
+    In file included from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp:3:
+    /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h: In function 'std::vector<at::Tensor> groundingdino::ms_deform_attn_backward(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, int)':
+    /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h:52:19: warning: 'at::DeprecatedTypeProperties& at::Tensor::type() const' is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       52 |     if (value.type().is_cuda())
+          |         ~~~~~~~~~~^~
+    In file included from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/core/Tensor.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/Tensor.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                     from /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/torch/extension.h:5,
+                     from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.h:12,
+                     from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn.h:13,
+                     from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/csrc/vision.cpp:3:
+    /ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/include/ATen/core/TensorBody.h:225:30: note: declared here
+      225 |   DeprecatedTypeProperties & type() const {
+          |                              ^~~~
+    ninja: build stopped: subcommand failed.
+    Traceback (most recent call last):
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2209, in _run_ninja_build
+        subprocess.run(
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/subprocess.py", line 526, in run
+        raise CalledProcessError(retcode, process.args,
+    subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "<string>", line 2, in <module>
+      File "<pip-setuptools-caller>", line 34, in <module>
+      File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/setup.py", line 208, in <module>
+        setup(
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup
+        return distutils.core.setup(**attrs)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 186, in setup
+        return run_commands(dist)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+        dist.run_commands()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 983, in run_commands
+        self.run_command(cmd)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/dist.py", line 999, in run_command
+        super().run_command(command)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+        cmd_obj.run()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/develop.py", line 35, in run
+        self.install_for_development()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/develop.py", line 112, in install_for_development
+        self.run_command('build_ext')
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/cmd.py", line 339, in run_command
+        self.distribution.run_command(command)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/dist.py", line 999, in run_command
+        super().run_command(command)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+        cmd_obj.run()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/build_ext.py", line 99, in run
+        _build_ext.run(self)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 365, in run
+        self.build_extensions()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 900, in build_extensions
+        build_ext.build_extensions(self)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 481, in build_extensions
+        self._build_extensions_serial()
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 507, in _build_extensions_serial
+        self.build_extension(ext)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/command/build_ext.py", line 264, in build_extension
+        _build_ext.build_extension(self, ext)
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/setuptools/_distutils/command/build_ext.py", line 562, in build_extension
+        objects = self.compiler.compile(
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 713, in unix_wrap_ninja_compile
+        _write_ninja_file_and_compile_objects(
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1869, in _write_ninja_file_and_compile_objects
+        _run_ninja_build(
+      File "/ext3/miniconda3/envs/rscd/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2225, in _run_ninja_build
+        raise RuntimeError(message) from e
+    RuntimeError: Error compiling objects for extension
+    [end of output]
+
+note: This error originates from a subprocess, and is likely not a problem with pip.

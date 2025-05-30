@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/test_grounding_dino.py", line 7, in <module>
+    from groundingdino.util.inference import load_model, load_image, predict, annotate
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/util/inference.py", line 12, in <module>
+    from grounding_dino.groundingdino.models import build_model
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/__init__.py", line 8, in <module>
+    from .GroundingDINO import build_groundingdino
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/__init__.py", line 15, in <module>
+    from .groundingdino import build_groundingdino
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/groundingdino.py", line 24, in <module>
+    from transformers import AutoTokenizer, BertModel, BertTokenizer, RobertaModel, RobertaTokenizerFast
+ModuleNotFoundError: No module named 'transformers'

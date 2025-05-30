@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 25, in <module>
+    import models
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/__init__.py", line 3, in <module>
+    from .CD_model import (
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 29, in <module>
+    from modules.registeration_module import FeatureRegisterationModule
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/CYWS-3D/modules/registeration_module.py", line 7, in <module>
+    from pytorch3d.renderer import AlphaCompositor, PerspectiveCameras, PointsRasterizationSettings, PointsRasterizer, PointsRenderer
+  File "/ext3/miniconda3/envs/cyws3d/lib/python3.9/site-packages/pytorch3d/renderer/__init__.py", line 7, in <module>
+    from .blending import (
+  File "/ext3/miniconda3/envs/cyws3d/lib/python3.9/site-packages/pytorch3d/renderer/blending.py", line 10, in <module>
+    from pytorch3d import _C
+ImportError: /ext3/miniconda3/envs/cyws3d/lib/python3.9/site-packages/pytorch3d/_C.cpython-39-x86_64-linux-gnu.so: undefined symbol: _ZN2at4_ops8mean_dim4callERKNS_6TensorEN3c108ArrayRefIlEEbNS5_8optionalINS5_10ScalarTypeEEE

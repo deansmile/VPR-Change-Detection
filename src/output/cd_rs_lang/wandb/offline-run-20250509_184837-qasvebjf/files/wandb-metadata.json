@@ -1,0 +1,105 @@
+{
+  "os": "Linux-5.14.0-284.86.1.el9_2.x86_64-x86_64-with-glibc2.35",
+  "python": "CPython 3.9.21",
+  "startedAt": "2025-05-09T22:48:37.820626Z",
+  "args": [
+    "src/scripts/configs/train_combine.yml"
+  ],
+  "program": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py",
+  "codePath": "src/scripts/train_para.py",
+  "git": {
+    "remote": "https://github.com/ChadLin9596/Robust-Scene-Change-Detection.git",
+    "commit": "b6d7ce1b79a905cfb0d3397e192ae6315b6c1745"
+  },
+  "root": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-48-37",
+  "host": "gr008.hpc.nyu.edu",
+  "executable": "/ext3/miniconda3/envs/rscd/bin/python",
+  "codePathLocal": "scripts/train_para.py",
+  "cpu_count": 48,
+  "cpu_count_logical": 48,
+  "gpu": "Quadro RTX 8000",
+  "gpu_count": 4,
+  "disk": {
+    "/": {
+      "total": "56215400448",
+      "used": "23058628608"
+    }
+  },
+  "memory": {
+    "total": "404879691776"
+  },
+  "cpu": {
+    "count": 48,
+    "countLogical": 48
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Quadro RTX 8000",
+      "memoryTotal": "48318382080",
+      "cudaCores": 4608,
+      "architecture": "Turing"
+    },
+    {
+      "name": "Quadro RTX 8000",
+      "memoryTotal": "48318382080",
+      "cudaCores": 4608,
+      "architecture": "Turing"
+    },
+    {
+      "name": "Quadro RTX 8000",
+      "memoryTotal": "48318382080",
+      "cudaCores": 4608,
+      "architecture": "Turing"
+    },
+    {
+      "name": "Quadro RTX 8000",
+      "memoryTotal": "48318382080",
+      "cudaCores": 4608,
+      "architecture": "Turing"
+    }
+  ],
+  "slurm": {
+    "cluster_name": "(null)",
+    "conf": "/opt/slurm/etc/slurm.conf",
+    "cpus_on_node": "16",
+    "cpus_per_task": "4",
+    "gpus_on_node": "4",
+    "gtids": "0",
+    "job_account": "pr_113_tandon_advanced",
+    "job_cpus_per_node": "16",
+    "job_end_time": "1746917283",
+    "job_gid": "3077396",
+    "job_gpus": "0,1,2,3",
+    "job_id": "60345365",
+    "job_name": "cd_ddp",
+    "job_nodelist": "gr008",
+    "job_num_nodes": "1",
+    "job_partition": "rtx8000",
+    "job_qos": "gpu48",
+    "job_start_time": "1746830883",
+    "job_uid": "3077396",
+    "job_user": "ds5725",
+    "jobid": "60345365",
+    "jobtmp": "/state/partition1/job-60345365",
+    "localid": "0",
+    "mem_per_node": "65536",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "gr008",
+    "nprocs": "4",
+    "ntasks": "4",
+    "ntasks_per_node": "4",
+    "prio_process": "0",
+    "procid": "0",
+    "script_context": "prolog_task",
+    "submit_dir": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection",
+    "submit_host": "log-2.hpc.nyu.edu",
+    "task_pid": "4101637",
+    "tasks_per_node": "4",
+    "tmpdir": "/state/partition1/job-60345365",
+    "topology_addr": "gr008",
+    "topology_addr_pattern": "node",
+    "tres_per_task": "cpu:4"
+  },
+  "cudaVersion": "12.2"
+}

@@ -1,0 +1,15 @@
+wandb
+numpy<2.0.0
+pyyaml
+Pillow
+matplotlib
+
+# (optional) for models/coattention.py
+einops
+
+# (optional) for py_utils git submodule
+requests
+
+torch==1.13.1
+torchvision==0.14.1
+xformers==0.0.16

@@ -1,0 +1,70 @@
+wandb: WARNING Unable to verify login in offline mode.
+wandb: Tracking run with wandb version 0.19.10
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+start program
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.06-21-44",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 500, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 170, in main
+    model = models.get_model(**args["model"]).to(_device)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/__init__.py", line 114, in get_model
+    backbone = get_dino_backbone(**opts)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/__init__.py", line 90, in get_dino_backbone
+    backbone = get_dino(
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/backbone_dinov2.py", line 70, in get_dino
+    if use_lora:
+NameError: name 'use_lora' is not defined
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.06-21-44/wandb/offline-run-20250509_022146-np6ipsfe[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-09.06-21-44/wandb/offline-run-20250509_022146-np6ipsfe/logs[0m

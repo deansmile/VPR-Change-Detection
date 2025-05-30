@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/evaluate.py", line 20, in <module>
+    import models
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/__init__.py", line 3, in <module>
+    from .CD_model import (
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 14, in <module>
+    from groundingdino.util.inference import load_model
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/util/inference.py", line 5, in <module>
+    import supervision as sv
+ModuleNotFoundError: No module named 'supervision'

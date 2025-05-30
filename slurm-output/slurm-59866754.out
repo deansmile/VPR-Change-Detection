@@ -1,0 +1,12 @@
+initialize our test dataset
+changed object text description
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/visualize.py", line 41, in <module>
+    "PSCD": _wrapper(datasets.get_dataset("PSCD", mode="test")),
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./datasets/__init__.py", line 80, in get_dataset
+    return loader(root=root, **kwargs)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./datasets/pscd.py", line 97, in __init__
+    super().__init__(root, mode)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./datasets/pscd.py", line 39, in __init__
+    assert np.all(filenames[I] == np.array(indices))
+IndexError: index 0 is out of bounds for axis 0 with size 0

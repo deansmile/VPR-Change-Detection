@@ -1,0 +1,22 @@
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_setup.py:_flush():67] Configure stats pid to 4101736
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_setup.py:_flush():67] Loading settings from /home/ds5725/.config/wandb/settings
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_setup.py:_flush():67] Loading settings from /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/wandb/settings
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-48-37/wandb/offline-run-20250509_184837-qasvebjf/logs/debug.log
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-48-37/wandb/offline-run-20250509_184837-qasvebjf/logs/debug-internal.log
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_init.py:init():761] calling init triggers
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'model': {'name': 'dino2 + cross_attention', 'dino-model': 'dinov2_vits14', 'layer1': 11, 'facet1': 'query', 'facet2': 'query', 'num-heads': 1, 'dropout-rate': 0.1, 'target-shp-row': 504, 'target-shp-col': 504, 'num-blocks': 1, 'freeze-dino': True, 'unfreeze-dino-last-n-layer': 0}, 'optimizer': {'epochs': 100, 'early-stop': 5, 'warmup-epoch': 10, 'learn-rate': 0.0001, 'loss-weight': True, 'lr-scheduler': 'cosine', 'grad-scaler': True}, 'dataset': {'batch-size': 2, 'num-workers': 4, 'dataset': 'Combined', 'hflip-prob': 0.5, 'diff-augment': False}, 'evaluation': {'trainset': 0}, 'wandb': {'project': '', 'name': '', 'output-path': '/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-48-37', 'save-checkpoint-freq': 10}, 'environment': {'dry': True, 'seed': 123, 'verbose': True, 'device': 'cuda'}, '_wandb': {}}
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_init.py:init():784] starting backend
+2025-05-09 18:48:37,801 INFO    MainThread:4101736 [wandb_init.py:init():788] sending inform_init request
+2025-05-09 18:48:37,820 INFO    MainThread:4101736 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-05-09 18:48:37,820 INFO    MainThread:4101736 [wandb_init.py:init():798] backend started and connected
+2025-05-09 18:48:37,823 INFO    MainThread:4101736 [wandb_init.py:init():891] updated telemetry
+2025-05-09 18:48:37,883 INFO    MainThread:4101736 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-05-09 18:48:38,106 INFO    MainThread:4101736 [wandb_init.py:init():990] starting run threads in backend
+2025-05-09 18:48:38,333 INFO    MainThread:4101736 [wandb_run.py:_console_start():2375] atexit reg
+2025-05-09 18:48:38,333 INFO    MainThread:4101736 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-05-09 18:48:38,334 INFO    MainThread:4101736 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-05-09 18:48:38,334 INFO    MainThread:4101736 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-05-09 18:48:38,335 INFO    MainThread:4101736 [wandb_init.py:init():1032] run started, returning control to user process

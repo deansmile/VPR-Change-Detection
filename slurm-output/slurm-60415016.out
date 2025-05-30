@@ -1,0 +1,83 @@
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+model
+	name: dino2 + cross_attention
+	dino-model: dinov2_vits14
+	layer1: 11
+	facet1: query
+	facet2: query
+	num-heads: 1
+	dropout-rate: 0.1
+	target-shp-row: 504
+	target-shp-col: 504
+	num-blocks: 1
+	freeze-dino: True
+	unfreeze-dino-last-n-layer: 0
+
+optimizer
+	epochs: 100
+	early-stop: 5
+	warmup-epoch: 10
+	learn-rate: 0.0001
+	loss-weight: True
+	lr-scheduler: cosine
+	grad-scaler: True
+
+dataset
+	batch-size: 2
+	num-workers: 4
+	dataset: Combined
+	hflip-prob: 0.5
+	diff-augment: False
+	figsize: None
+
+evaluation
+	trainset: 0
+
+wandb
+	project: 
+	name: 
+	output-path: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.22-48-37
+	save-checkpoint-freq: 10
+
+environment
+	dry: True
+	seed: 123
+	verbose: True
+	device: cuda
+
+eval_path:  /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/cd_rs_lang/eval.best.val.json
+LORA added to the encoder
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+<All keys matched successfully>
+
+Evaluate on S2Looking Dataset (test)
+
+{
+    "epoch": 63,
+    "OurDataset": {
+        "test": {
+            "OurDataset": {
+                "precision": 0.5081975238184515,
+                "recall": 0.6997621406070517,
+                "accuracy": 0.9031126165280926,
+                "f1_score": 0.5400302409040846
+            }
+        }
+    },
+    "S2Looking": {
+        "test": {
+            "S2Looking": {
+                "precision": 0.2254519681378394,
+                "recall": 0.6486557115038034,
+                "accuracy": 0.8707280033541195,
+                "f1_score": 0.3078271135165518
+            }
+        }
+    }
+}

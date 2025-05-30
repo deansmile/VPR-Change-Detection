@@ -1,0 +1,382 @@
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+start programstart programstart program
+
+
+start program
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Unable to verify login in offline mode.
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Tracking run with wandb version 0.19.8
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.11-01-54",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.11-01-54",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.11-01-54",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.11-01-54",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+
+
+get combined dataset
+
+get combined datasetget combined dataset
+
+get combined dataset
+initialize cmu datasetinitialize cmu datasetinitialize cmu dataset
+
+
+initialize cmu dataset
+initialize our train datasetinitialize our train dataset
+
+initialize our train dataset
+initialize our train dataset
+Using DistributedSampler for trainUsing DistributedSampler for trainUsing DistributedSampler for trainUsing DistributedSampler for train
+
+
+
+initialize cmu datasetinitialize cmu dataset
+
+initialize cmu dataset
+initialize cmu dataset
+initialize our train datasetinitialize our train dataset
+
+initialize our train dataset
+initialize our train dataset
+Using DistributedSampler for valUsing DistributedSampler for val
+Using DistributedSampler for valUsing DistributedSampler for val
+
+
+initialize cmu dataset
+initialize cmu dataset
+initialize cmu dataset
+initialize cmu dataset
+initialize our test datasetinitialize our test datasetinitialize our test datasetinitialize our test dataset
+
+
+
+Using DistributedSampler for testUsing DistributedSampler for test
+Using DistributedSampler for testUsing DistributedSampler for test
+
+
+epochs: 200
+Resuming from checkpoint: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/cd_rs_lang/best.val.pth
+epochs: 200
+Resuming from checkpoint: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/cd_rs_lang/best.val.pth
+epochs: 200
+Resuming from checkpoint: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/cd_rs_lang/best.val.pth
+epochs: 200
+Resuming from checkpoint: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/cd_rs_lang/best.val.pth
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+LORA added to the encoder
+LORA added to the encoderLORA added to the encoder
+
+LORA added to the encoder
+final text_encoder_type: bert-base-uncased
+final text_encoder_type: bert-base-uncasedfinal text_encoder_type: bert-base-uncased
+
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+Unfreeze fusion_layers
+Unfreeze fusion_layers
+Unfreeze fusion_layers
+<All keys matched successfully><All keys matched successfully>
+
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 587, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 341, in main
+    optimizer.load_state_dict(checkpoint["optimizer"])
+Traceback (most recent call last):
+UnboundLocalError: local variable 'optimizer' referenced before assignment
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 587, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 341, in main
+    optimizer.load_state_dict(checkpoint["optimizer"])
+UnboundLocalError: local variable 'optimizer' referenced before assignment
+<All keys matched successfully><All keys matched successfully>
+
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 587, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 341, in main
+    optimizer.load_state_dict(checkpoint["optimizer"])
+UnboundLocalError: local variable 'optimizer' referenced before assignment
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 587, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 341, in main
+    optimizer.load_state_dict(checkpoint["optimizer"])
+UnboundLocalError: local variable 'optimizer' referenced before assignment
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: 
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.11-01-54/wandb/offline-run-20250512_070155-ku2d1dbf[0m
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.11-01-54/wandb/offline-run-20250512_070155-bxp0tsna[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-12.11-01-54/wandb/offline-run-20250512_070155-ku2d1dbf/logs[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-12.11-01-54/wandb/offline-run-20250512_070155-bxp0tsna/logs[0m
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.11-01-54/wandb/offline-run-20250512_070155-gukbrwc8[0m
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-12.11-01-54/wandb/offline-run-20250512_070155-zk9aqjml[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-12.11-01-54/wandb/offline-run-20250512_070155-gukbrwc8/logs[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-12.11-01-54/wandb/offline-run-20250512_070155-zk9aqjml/logs[0m
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 3790293) of binary: /ext3/miniconda3/envs/rscd/bin/python
+Traceback (most recent call last):
+  File "/ext3/miniconda3/envs/rscd/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/run.py", line 762, in main
+    run(args)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/run.py", line 753, in run
+    elastic_launch(
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 246, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+src/scripts/train_para.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-12_07:02:18
+  host      : gr041.hpc.nyu.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 3790294)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-12_07:02:18
+  host      : gr041.hpc.nyu.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 3790295)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-12_07:02:18
+  host      : gr041.hpc.nyu.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 3790296)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-12_07:02:18
+  host      : gr041.hpc.nyu.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3790293)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

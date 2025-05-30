@@ -1,0 +1,94 @@
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 25, in <module>
+    import models
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/__init__.py", line 3, in <module>
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 25, in <module>
+    from .CD_model import (
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 29, in <module>
+    import models
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/__init__.py", line 3, in <module>
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 25, in <module>
+Traceback (most recent call last):
+      File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train_para.py", line 25, in <module>
+from .CD_model import (
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 29, in <module>
+    import models
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/__init__.py", line 3, in <module>
+    import models
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/__init__.py", line 3, in <module>
+    from .CD_model import (
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 29, in <module>
+    from .CD_model import (
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 29, in <module>
+        from modules.registeration_module import FeatureRegisterationModule        from modules.registeration_module import FeatureRegisterationModule
+from modules.registeration_module import FeatureRegisterationModulefrom modules.registeration_module import FeatureRegisterationModule
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/CYWS-3D/modules/registeration_module.py", line 1, in <module>
+
+
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/CYWS-3D/modules/registeration_module.py", line 1, in <module>
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/CYWS-3D/modules/registeration_module.py", line 1, in <module>
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/CYWS-3D/modules/registeration_module.py", line 1, in <module>
+    import kornia as K    
+    import kornia as KModuleNotFoundError    import kornia as K
+: import kornia as K
+ModuleNotFoundErrorNo module named 'kornia'
+ModuleNotFoundError: 
+ModuleNotFoundError: No module named 'kornia': No module named 'kornia'
+No module named 'kornia'
+
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 4060790) of binary: /ext3/miniconda3/envs/rscd/bin/python
+Traceback (most recent call last):
+  File "/ext3/miniconda3/envs/rscd/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/run.py", line 762, in main
+    run(args)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/run.py", line 753, in run
+    elastic_launch(
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 246, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+src/scripts/train_para.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-09_13:52:30
+  host      : gr008.hpc.nyu.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4060791)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-09_13:52:30
+  host      : gr008.hpc.nyu.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 4060792)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-09_13:52:30
+  host      : gr008.hpc.nyu.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 4060793)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-09_13:52:30
+  host      : gr008.hpc.nyu.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 4060790)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

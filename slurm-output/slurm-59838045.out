@@ -1,0 +1,74 @@
+wandb: Tracking run with wandb version 0.17.7
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+start program
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 4,
+        "num-workers": 4,
+        "dataset": "VL_CMU_CD",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-04-27.17-29-33",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 470, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 170, in main
+    model = models.get_model(**args["model"]).to(_device)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/__init__.py", line 122, in get_model
+    return loader(backbone, **kwargs)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 128, in __init__
+    configs = get_easy_dict_from_yaml_file("/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/CYWS-3D/config.yml")
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 37, in get_easy_dict_from_yaml_file
+    yaml_file = yaml.safe_load(stream)
+NameError: name 'yaml' is not defined
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-04-27.17-29-33/wandb/offline-run-20250427_132934-ie3kryqe
+wandb: Find logs at: ./output/2025-04-27.17-29-33/wandb/offline-run-20250427_132934-ie3kryqe/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.

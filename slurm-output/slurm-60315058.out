@@ -1,0 +1,120 @@
+wandb: WARNING Unable to verify login in offline mode.
+wandb: Tracking run with wandb version 0.19.10
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+start program
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.06-30-35",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+LORA added to the encoder
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+get combined dataset
+initialize cmu dataset
+initialize our train dataset
+initialize cmu dataset
+initialize our train dataset
+initialize cmu dataset
+initialize our test dataset
+epochs: 100
+     ===== running 0 epoch =====
+     2025-05-09.06-31-12
+     
+     *** train one epoch ***
+after set grad
+after prog
+start loop
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  ['', 'scaffolding. green covering. orange traffic cone. green tree.']
+     output:  torch.Size([2, 504, 504, 2]) -> torch.Size([2, 2, 504, 504])
+     Train Epoch: [0/9870]	Loss: 0.579739
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 475, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 282, in main
+    loss, data_inds, batch_losses, train_time = train_one_epoch(
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 91, in train_one_epoch
+    for idx, (inds, (input_1, input_2, targets, caption)) in enumerate(data_loader):
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1333, in _next_data
+    return self._process_data(data)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1359, in _process_data
+    data.reraise()
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/_utils.py", line 543, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in DataLoader worker process 3.
+Original Traceback (most recent call last):
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 302, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 61, in fetch
+    return self.collate_fn(data)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 265, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 143, in collate
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 143, in <listcomp>
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 143, in collate
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 143, in <listcomp>
+    return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]  # Backwards compatibility.
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/utils/data/_utils/collate.py", line 139, in collate
+    raise RuntimeError('each element in list of batch should be of equal size')
+RuntimeError: each element in list of batch should be of equal size
+
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.06-30-35/wandb/offline-run-20250509_023037-jjfz2q5i[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-09.06-30-35/wandb/offline-run-20250509_023037-jjfz2q5i/logs[0m

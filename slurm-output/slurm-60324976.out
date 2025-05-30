@@ -1,0 +1,118 @@
+wandb: WARNING Unable to verify login in offline mode.
+wandb: Tracking run with wandb version 0.19.10
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+start program
+{
+    "model": {
+        "name": "dino2 + cross_attention",
+        "dino-model": "dinov2_vits14",
+        "layer1": 11,
+        "facet1": "query",
+        "facet2": "query",
+        "num-heads": 1,
+        "dropout-rate": 0.1,
+        "target-shp-row": 504,
+        "target-shp-col": 504,
+        "num-blocks": 1,
+        "freeze-dino": true,
+        "unfreeze-dino-last-n-layer": 0
+    },
+    "optimizer": {
+        "epochs": 100,
+        "early-stop": 5,
+        "warmup-epoch": 10,
+        "learn-rate": 0.0001,
+        "loss-weight": true,
+        "lr-scheduler": "cosine",
+        "grad-scaler": true
+    },
+    "dataset": {
+        "batch-size": 2,
+        "num-workers": 4,
+        "dataset": "Combined",
+        "hflip-prob": 0.5,
+        "diff-augment": false
+    },
+    "evaluation": {
+        "trainset": 0
+    },
+    "wandb": {
+        "project": "",
+        "name": "",
+        "output-path": "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.15-10-28",
+        "save-checkpoint-freq": 10
+    },
+    "environment": {
+        "dry": true,
+        "seed": 123,
+        "verbose": true,
+        "device": "cuda"
+    }
+}
+LORA added to the encoder
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+get combined dataset
+initialize cmu dataset
+initialize our train dataset
+initialize cmu dataset
+initialize our train dataset
+initialize cmu dataset
+initialize our test dataset
+epochs: 100
+     ===== running 0 epoch =====
+     2025-05-09.15-10-51
+     
+     *** train one epoch ***
+after set grad
+after prog
+start loop
+     input_1:  torch.Size([2, 3, 504, 504])
+     input_2:  torch.Size([2, 3, 504, 504])
+     targets:  torch.Size([2, 504, 504])
+     caption:  ['white flag. large truck.', 'scaffolding. green covering. orange traffic cone. green tree.']
+     output:  torch.Size([2, 504, 504, 2]) -> torch.Size([2, 2, 504, 504])
+     Train Epoch: [0/9870]	Loss: 0.581787
+     Train Epoch: [20/9870]	Loss: 0.601669
+     Train Epoch: [40/9870]	Loss: 0.807535
+     Train Epoch: [60/9870]	Loss: 0.751033
+     Train Epoch: [80/9870]	Loss: 0.587663
+     Train Epoch: [100/9870]	Loss: 0.686241
+     Train Epoch: [120/9870]	Loss: 0.691651
+     Train Epoch: [140/9870]	Loss: 0.515213
+     Train Epoch: [160/9870]	Loss: 0.606773
+     Train Epoch: [180/9870]	Loss: 0.656668
+     Train Epoch: [200/9870]	Loss: 0.716252
+[Warning] Empty token mask for caption[0]: 'airplane on the tarmac (top left)'
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 475, in <module>
+    main(args)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 282, in main
+    loss, data_inds, batch_losses, train_time = train_one_epoch(
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/train.py", line 113, in train_one_epoch
+    outputs = model(input_1, input_2, caption)  # (n, 504, 504, 2)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/nn/parallel/data_parallel.py", line 169, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 220, in forward
+    dino_feat_1_0 = self.grounding_dino.improve_dino_feature(dino_feat_1_0, caption)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/groundingdino.py", line 272, in improve_dino_feature
+    ) = generate_masks_with_special_tokens_and_transfer_map(
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/bertwarper.py", line 271, in generate_masks_with_special_tokens_and_transfer_map
+    cate_to_token_mask_list = [
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/grounding_dino/groundingdino/models/GroundingDINO/bertwarper.py", line 272, in <listcomp>
+    torch.stack(cate_to_token_mask_listi, dim=0)
+RuntimeError: stack expects a non-empty TensorList
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-05-09.15-10-28/wandb/offline-run-20250509_111029-l2711x4u[0m
+[1;34mwandb[0m: Find logs at: [1;35moutput/2025-05-09.15-10-28/wandb/offline-run-20250509_111029-l2711x4u/logs[0m

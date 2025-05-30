@@ -1,0 +1,50 @@
+FFF.....
+======================================================================
+FAIL: test_PSCD (test_datasets.TestDataLoader)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/unittest/test_datasets.py", line 68, in test_PSCD
+    self.assertEqual(t0.shape, (224, 224, 3))
+AssertionError: Tuples differ: (1152, 224, 3) != (224, 224, 3)
+
+First differing element 0:
+1152
+224
+
+- (1152, 224, 3)
++ (224, 224, 3)
+
+======================================================================
+FAIL: test_PSCD_Diff_View_1 (test_datasets.TestDataLoader)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/unittest/test_datasets.py", line 95, in test_PSCD_Diff_View_1
+    self.assertEqual(t0.shape, (224, 224, 3))
+AssertionError: Tuples differ: (1152, 224, 3) != (224, 224, 3)
+
+First differing element 0:
+1152
+224
+
+- (1152, 224, 3)
++ (224, 224, 3)
+
+======================================================================
+FAIL: test_PSCD_Diff_View_2 (test_datasets.TestDataLoader)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/unittest/test_datasets.py", line 122, in test_PSCD_Diff_View_2
+    self.assertEqual(t0.shape, (224, 224, 3))
+AssertionError: Tuples differ: (1152, 224, 3) != (224, 224, 3)
+
+First differing element 0:
+1152
+224
+
+- (1152, 224, 3)
++ (224, 224, 3)
+
+----------------------------------------------------------------------
+Ran 8 tests in 4.099s
+
+FAILED (failures=3)

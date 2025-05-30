@@ -1,0 +1,24 @@
+{"time":"2025-05-09T18:48:37.644462526-04:00","level":"INFO","msg":"main: starting server","port-filename":"/state/partition1/job-60345365/tmpwdfa5mwh/port-4101734.txt","pid":4101734,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-05-09T18:48:37.644459854-04:00","level":"INFO","msg":"main: starting server","port-filename":"/state/partition1/job-60345365/tmp11ulpuuk/port-4101736.txt","pid":4101736,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-05-09T18:48:37.644464804-04:00","level":"INFO","msg":"main: starting server","port-filename":"/state/partition1/job-60345365/tmpkr241wut/port-4101737.txt","pid":4101737,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-05-09T18:48:37.644456961-04:00","level":"INFO","msg":"main: starting server","port-filename":"/state/partition1/job-60345365/tmpqmxwz864/port-4101735.txt","pid":4101735,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-05-09T18:48:37.645758846-04:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":4101734}
+{"time":"2025-05-09T18:48:37.645779269-04:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":4101736}
+{"time":"2025-05-09T18:48:37.645811521-04:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":34283,"Zone":""}}
+{"time":"2025-05-09T18:48:37.645816226-04:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":44265,"Zone":""}}
+{"time":"2025-05-09T18:48:37.645754732-04:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":4101737}
+{"time":"2025-05-09T18:48:37.645686148-04:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":4101735}
+{"time":"2025-05-09T18:48:37.645816283-04:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":41053,"Zone":""}}
+{"time":"2025-05-09T18:48:37.64581081-04:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":44747,"Zone":""}}
+{"time":"2025-05-09T18:48:37.792768948-04:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:47450"}
+{"time":"2025-05-09T18:48:37.7927876-04:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:38272"}
+{"time":"2025-05-09T18:48:37.792770547-04:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:57544"}
+{"time":"2025-05-09T18:48:37.794685435-04:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:49296"}
+{"time":"2025-05-09T18:48:37.819582168-04:00","level":"INFO","msg":"handleInformInit: received","streamId":"p10fcigm","id":"127.0.0.1:49296"}
+{"time":"2025-05-09T18:48:37.819590078-04:00","level":"INFO","msg":"handleInformInit: received","streamId":"negbgggt","id":"127.0.0.1:38272"}
+{"time":"2025-05-09T18:48:37.819623611-04:00","level":"INFO","msg":"handleInformInit: received","streamId":"dextt52f","id":"127.0.0.1:47450"}
+{"time":"2025-05-09T18:48:37.821585158-04:00","level":"INFO","msg":"handleInformInit: received","streamId":"qasvebjf","id":"127.0.0.1:57544"}
+{"time":"2025-05-09T18:48:38.104452205-04:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"qasvebjf","id":"127.0.0.1:57544"}
+{"time":"2025-05-09T18:48:38.10447922-04:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"dextt52f","id":"127.0.0.1:47450"}
+{"time":"2025-05-09T18:48:38.104805247-04:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"p10fcigm","id":"127.0.0.1:49296"}
+{"time":"2025-05-09T18:48:38.104805978-04:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"negbgggt","id":"127.0.0.1:38272"}

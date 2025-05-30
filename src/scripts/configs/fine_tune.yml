@@ -1,0 +1,67 @@
+##############################################
+# CONFIGURATION FILE FOR FINE TUNING PROCESS #
+##############################################
+
+###################
+# model selection #
+###################
+
+model:
+    checkpoints: ""              # path to the pre-trained model
+    target-shp-row: 224
+    target-shp-col: 224          # 224 for PSCD
+
+#############
+# optimizer #
+#############
+
+# ---------
+optimizer:
+    epochs: 10
+    warmup-epoch: 0
+    learn-rate: 0.00004
+    loss-weight: True
+    lr-scheduler: "none"    # {cosine, linear, exp, none}
+    grad-scaler: True       # enable mixed precision
+
+###########
+# dataset #
+###########
+
+# -------
+dataset:
+    batch-size: 4
+    num-workers: 4
+    dataset: "PSCD"         # PSCD
+    hflip-prob: 0.5
+
+##############
+# evaluation #
+##############
+
+# ----------
+evaluation:
+    # name: epoch frequency
+    trainset: 0
+
+#########
+# wandb #
+#########
+
+# ------
+wandb:
+    project: ""
+    name: ""
+    output-path: ""
+    save-checkpoint-freq: 0  # frequency
+
+########################
+# develope and testing #
+########################
+
+# --------------------
+environment:
+    dry: False
+    seed: 123
+    verbose: True
+    device: "cuda"

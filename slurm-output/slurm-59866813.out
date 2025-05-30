@@ -1,0 +1,94 @@
+Using cache found in /home/ds5725/.cache/torch/hub/facebookresearch_dinov2_main
+A matching Triton is not available, some optimizations will not be enabled.
+Error caught was: No module named 'triton'
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+initialize our test dataset
+changed object text description
+model
+	name: dino2 + cross_attention
+	dino-model: dinov2_vits14
+	layer1: 11
+	facet1: query
+	facet2: query
+	num-heads: 1
+	dropout-rate: 0.1
+	target-shp-row: 504
+	target-shp-col: 504
+	num-blocks: 1
+	freeze-dino: True
+	unfreeze-dino-last-n-layer: 0
+
+optimizer
+	epochs: 100
+	warmup-epoch: 10
+	learn-rate: 0.0001
+	loss-weight: True
+	lr-scheduler: cosine
+	grad-scaler: True
+
+dataset
+	batch-size: 4
+	num-workers: 4
+	dataset: VL_CMU_CD
+	hflip-prob: 0.5
+	diff-augment: False
+	figsize: None
+
+evaluation
+	trainset: 0
+
+wandb
+	project: 
+	name: 
+	output-path: /scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/output/2025-04-23.13-25-47
+	save-checkpoint-freq: 10
+
+environment
+	dry: True
+	seed: 123
+	verbose: True
+	device: cuda
+
+final text_encoder_type: bert-base-uncased
+Unfreeze fusion_layers
+<All keys matched successfully>
+[------------------------------] 0.0%
+DINOv2 feature shape from img_1: torch.Size([1, 384, 36, 36])
+DINOv2 feature shape from img_2: torch.Size([1, 384, 36, 36])
+[FeatureRegistrationModule] Batch keys: ['registration_strategy', 'points1', 'points2', 'intrinsics1', 'intrinsics2', 'rotation1', 'rotation2', 'position1', 'position2', 'depth1', 'depth2']
+  registration_strategy: List of length 1
+  points1: List of length 1
+  points2: List of length 1
+  intrinsics1: List of length 1
+  intrinsics2: List of length 1
+  rotation1: List of length 1
+  rotation2: List of length 1
+  position1: List of length 1
+  position2: List of length 1
+  depth1: Tensor torch.Size([1, 1, 36, 36])
+  depth2: Tensor torch.Size([1, 1, 36, 36])
+[Registration] Strategies - 3D: 0, 2D: 1, Identity: 0
+Traceback (most recent call last):
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/visualize.py", line 332, in <module>
+    main(path, option, output)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/scripts/visualize.py", line 256, in main
+    x = model(img0, img1, caption)  # (1, m, n, 2)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/nn/parallel/data_parallel.py", line 169, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/src/./models/CD_model.py", line 223, in forward
+    dino_feat_1_0, dino_feat_2_0 = self.feature_register(batch_info, dino_feat_1_0, dino_feat_2_0)
+  File "/ext3/miniconda3/envs/rscd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/CYWS-3D/modules/registeration_module.py", line 189, in forward
+    image1_2d, image2_2d, trasform_points_1_to_2_2d, transform_points_2_to_1_2d = self.register_features(slice_batch_given_bool_array(batch, reg_2d), image1[reg_2d], image2[reg_2d], "2d")
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/CYWS-3D/modules/registeration_module.py", line 158, in register_features
+    image1_warped_onto_image2, image2_warped_onto_image1, trasform_points_1_to_2, transform_points_2_to_1 = self.register_2d_features(
+  File "/scratch/ds5725/alvpr/Robust-Scene-Change-Detection/CYWS-3D/modules/registeration_module.py", line 102, in register_2d_features
+    M_1_to_2.append(batch["transfm2d_1_to_2"][i])
+KeyError: 'transfm2d_1_to_2'
