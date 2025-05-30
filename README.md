@@ -5,16 +5,12 @@
 
 * [arXiv link](http://arxiv.org/abs/2409.16850)
 
-### An Introduction Video (3 minutes)
-
-[![](https://img.youtube.com/vi/KX2E8Q5D-Fk/0.jpg)](https://www.youtube.com/watch?v=KX2E8Q5D-Fk)
-
 
 ### Installation
 
 ```bash
 # clone main repo and corresponding submodule
-$ git clone https://github.com/ChadLin9596/Robust-Scene-Change-Detection
+$ git clone https://github.com/deansmile/VPR-Change-Detection.git
 $ cd <this repository>
 $ git submodule init
 $ git submodule update
@@ -99,12 +95,3 @@ $ pip install -r requirements.txt
 | DinoV2    | 1 CrossAttn        | [dinov2.1CrossAttn.CMU](https://github.com/ChadLin9596/Robust-Scene-Change-Detection/releases/download/v0.0.0/dinov2.1CrossAttn.CMU.pth) |
 | DinoV2    | 2 CrossAttn        | [dinov2.2CrossAttn.CMU](https://github.com/ChadLin9596/Robust-Scene-Change-Detection/releases/download/v0.0.0/dinov2.2CrossAttn.CMU.pth) |
 | Resnet-18 | 2 CrossAttn        | [resnet18.2CrossAttn.CMU](https://github.com/ChadLin9596/Robust-Scene-Change-Detection/releases/download/v0.0.0/resnet18.2CrossAttn.CMU.pth) |
-
-### TODO
-
-* [x] release source code
-    * [x] release datasets module
-    * [x] release models module
-    * [x] release train/fine-tune/evaluation/visualize scripts
-* [x] release pretraining weight
-* [ ] examples of inference on new scenes
