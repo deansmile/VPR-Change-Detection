@@ -1,10 +1,6 @@
 # Robust Scene Change Detection Using Visual Foundation Models and Cross-Attention Mechanisms
 
 
-### Paper
-
-* [arXiv link](http://arxiv.org/abs/2409.16850)
-
 
 ### Installation
 
@@ -26,6 +22,10 @@ $ pip install -r requirements.txt
 * download [VL-CMU-CD](https://huggingface.co/datasets/Flourish/VL-CMU-CD/blob/main/VL-CMU-CD-binary255.zip) & [PSCD](https://kensakurada.github.io/pscd/term_of_use.html) datasets
 
 * update the both dataset directories to `datasets/data_factory`
+
+### ICRA 2025 Paper
+
+* [arXiv link](http://arxiv.org/abs/2409.16850)
 
 ### Example usage
 
