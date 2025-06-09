@@ -6,15 +6,15 @@
 # ================================================================
 
 
-## cd X:\03_code\vpr\VPR-Change-Detection
-## python -m src.models.dinov2_lora
+## cd VPR-Change-Detection
+## python -m src.dinov2_lora
 
 import math, torch, copy, timm, collections
 from torch import nn
 from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms as T
-from transformers import AutoImageProcessor, Dinov2Model
-# from transformers import DinoVisionModel, DinoImageProcessor
+from transformers import AutoImageProcessor
+from transformers import Dinov2Model, Dinov2Config, Dinov2ImageProcessor
 from peft import LoraConfig, get_peft_model
 
 from pathlib import Path
@@ -26,7 +26,9 @@ from PIL import Image
 # sys.path.append("../../../")
 
 
-dataset_path = "../../Datasets/VL-CMU-CD"
+dataset_path = "../Datasets/VL-CMU-CD"
+
+
 
 # -------- 1. Data ------------------------------------------------
 
@@ -49,7 +51,7 @@ class CMUChangeDataset(Dataset):
     def __init__(self,
                  root: str,
                  split: str = "train",
-                 img_size: int = 224,
+                 img_size: int = 224,  # dino features work best on 224x224
                  processor_name: str = "facebook/dinov2-base"):
         super().__init__()
 
@@ -109,6 +111,7 @@ class CMUChangeDataset(Dataset):
         }
 
 
+
 # # -----------------------------------------------------------------
 # # quick smoke test
 # # -----------------------------------------------------------------
@@ -138,7 +141,7 @@ if __name__ == '__main__':
     for n, p in student.named_parameters():
         p.requires_grad = n.startswith("encoder.layers.11")
 
-    # 2b. Always unfreeze LayerNorm affine params
+    # 2b. Always unfreeze LayerNorm affine params (from ExpLora paper)
     for m in student.modules():
         if isinstance(m, nn.LayerNorm):  # tiny
             m.weight.requires_grad_(True)
@@ -148,7 +151,7 @@ if __name__ == '__main__':
     peft_cfg = LoraConfig(
         task_type="FEATURE_EXTRACTION",      # doesn't matter—just disables text-specific rules
         r=64, lora_alpha=64, lora_dropout=0.05,
-        target_modules = ["query", "key", "value"],
+        target_modules = ["query", "value"], # ExpLora paper doesn't use Key
         fan_in_fan_out=False
     )
     student = get_peft_model(student, peft_cfg)
