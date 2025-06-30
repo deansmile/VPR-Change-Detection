@@ -19,7 +19,7 @@ $ pip install -r requirements.txt
 
 ### Datasets
 
-* download [VL-CMU-CD](https://huggingface.co/datasets/Flourish/VL-CMU-CD/blob/main/VL-CMU-CD-binary255.zip) & [PSCD](https://kensakurada.github.io/pscd/term_of_use.html) datasets
+* download datasets from [huggingface](https://huggingface.co/ai4ce/vpr_change_detection/tree/main)
 
 * update the both dataset directories to `datasets/data_factory`
 
